@@ -1,0 +1,184 @@
+ion-header ion-toolbar ion-title {
+    .title_inner {
+        .profile_img {
+            min-width: 40px;
+            height: 40px;
+            width: 40px;
+            margin-right: 15px;
+            border-radius: 50%;
+        }
+
+        h2 {
+            margin: 0;
+            font-size: 1rem;
+            font-weight: 500;
+            letter-spacing: .4px;
+        }
+
+        ion-icon {
+            font-size: 1.5rem;
+            min-width: 25px;
+        }
+    }
+}
+
+.chat_container {
+    padding: 20px 15px 70px 15px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 3;
+
+    .chat_box {
+        width: auto !important;
+        margin-bottom: 10px;
+        align-items: flex-start;
+        width: 100% !important;
+
+        .chat_details {
+            display: flex;
+            width: 100%;
+        }
+
+        .chat {
+            border-radius: 5px;
+            max-width: calc(100% - 63px);
+            min-width: 199px;
+            width: 100%;
+            box-shadow: 0 7px 6px -7px rgba(0, 0, 0, 0.5) !important;
+            margin-bottom: 4px;
+
+            h2 {
+                margin: 0;
+                font-size: 0.85rem;
+                color: var(--white);
+                font-weight: 400;
+            }
+        }
+
+        p {
+            margin: 0;
+            font-size: 0.75rem;
+            font-weight: 400;
+            color: var(--white);
+            padding-top: 7px;
+            min-width: 50px;
+            opacity: 0.7;
+        }
+
+        &.received {
+            .chat_details {
+                margin-left: 0;
+                margin-right: auto;
+            }
+
+            .chat {
+                background: var(--primary);
+                padding: 12px 10px 12px 18px;
+
+                p {
+                    text-align: right;
+                }
+            }
+        }
+
+        &.send {
+            margin-left: auto;
+            margin-right: 0;
+
+            .chat_details {
+                margin-left: auto;
+                margin-right: 0;
+
+            }
+
+            .chat {
+                background: var(--item_bg);
+                padding: 12px 18px 12px 10px;
+                margin-left: auto;
+
+                h2 {
+                    text-align: right;
+
+                }
+
+                p {
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
+
+
+ion-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+
+    &::after,
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(47, 47, 47, 0.37);
+        backdrop-filter: blur(5px);
+    }
+ 
+    .form {
+        padding: 0;
+        width: 100%;
+
+        ion-item {
+            margin: 0;
+            padding: 0 15px !important;
+
+            .item_inner {
+                align-items: center !important;
+
+                h3 {
+                    margin: 0;
+                    display: block;
+                    min-height: unset;
+                    line-height: normal;
+
+                    ion-icon {
+                        color: var(--white);
+                        font-size: 1.45rem;
+                        opacity: 0.8;
+                        min-width: 32px;
+                        line-height: 35px;
+                        height: 27px;
+                    }
+                }
+
+                ion-input {
+                    --placeholder-color: var(--text-light) !important;
+                    --placeholder-opacity: 1;
+                    font-size: .85rem !important;
+                    --placeholder-font-weight: 500 !important;
+                    font-weight: 400 !important;
+                    padding: 8px 0 !important;
+                }
+
+                .send_button {
+                    height: 56px;
+                    display: flex;
+                    align-items: center;
+                    min-width: 44px;
+
+                    ion-icon {
+                        font-size: 1.5rem;
+                        line-height: 22px;
+                        height: 22px;
+                        color: var(--primary);
+                    }
+                }
+            }
+        }
+    }
+}

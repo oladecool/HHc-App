@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+          <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>{{'Testimonies' | translate}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen class="bg_img">
+  <div class="logo ion-text-center">
+        <h1 class="ion-text-center;">Submit <br>Testimony</h1>
+    </div>
+
+  <div class="form">
+      <ion-list lines="none">
+          <ion-item lines="none">
+              <div class="item_inner d-flex">
+                  <ion-icon class="zmdi zmdi-account ion-text-start"></ion-icon>
+                  <ion-input mode="md" type="name" placeholder="{{'name' | translate}}"></ion-input>
+              </div>
+          </ion-item>
+          <ion-item lines="none">
+              <div class="item_inner d-flex">
+                  <ion-icon class="zmdi zmdi-email ion-text-start"></ion-icon>
+                  <ion-input mode="md" type="email" placeholder="{{'e_mail' | translate}}"></ion-input>
+              </div>
+          </ion-item>
+          <ion-item lines="none">
+            <div class="item_inner d-flex">
+                <!-- <ion-icon class="zmdi zmdi-email ion-text-start"></ion-icon> -->
+                <ion-textarea rows="7" mode="md" type="text" placeholder="{{'your_message' | translate}}"></ion-textarea>
+            </div>
+        </ion-item>
+      </ion-list>
+      <ion-button size="large" expand="full" class="btn" (click)="">{{'submit' | translate}}</ion-button>
+  </div>
+</ion-content>

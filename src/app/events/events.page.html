@@ -1,0 +1,917 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            <div class="title_inner d-flex">
+                {{'events' | translate}}
+            </div>
+        </ion-title>
+    </ion-toolbar>
+
+    <ion-segment [(ngModel)]="events_tab" lines="none" mode="md">
+        <ion-segment-button value="upcoming" mode="md">
+            <ion-label>{{'upcoming' | translate}}</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="past" mode="md">
+            <ion-label>{{'past' | translate}}</ion-label>
+        </ion-segment-button>
+    </ion-segment>
+</ion-header>
+
+<ion-content class="bg_img" fullscreen>
+    <div class="tab_content" [ngSwitch]="events_tab">
+        <ion-list lines="none" *ngSwitchCase="'upcoming'">
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>14<sup>th</sup> <span>MAY</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>The Connection Study For Trauma Informed Care</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>16<sup>th</sup> <span>MAY</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>Contrary to popular belief, Lorem Ipsum is</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>20<sup>th</sup> <span>MAY</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>There are many variations of passages of Lorem Ipsum</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>25<sup>th</sup> <span>MAY</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>1<sup>th</sup> <span>JUN</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>At vero eos et accusamus et iusto odio dignissimos ducimus</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>10<sup>th</sup> <span>JUN</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>On the other hand, we denounce with righteous</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>15<sup>th</sup> <span>JUN</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>At vero eos et accusamus et iusto odio dignissimos ducimus</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>14<sup>th</sup> <span>MAY</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>The Connection Study For Trauma Informed Care</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>16<sup>th</sup> <span>MAY</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>Contrary to popular belief, Lorem Ipsum is</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>20<sup>th</sup> <span>MAY</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>There are many variations of passages of Lorem Ipsum</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>25<sup>th</sup> <span>MAY</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>1<sup>th</sup> <span>JUN</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>At vero eos et accusamus et iusto odio dignissimos ducimus</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>10<sup>th</sup> <span>JUN</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>On the other hand, we denounce with righteous</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>15<sup>th</sup> <span>JUN</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>At vero eos et accusamus et iusto odio dignissimos ducimus</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>14<sup>th</sup> <span>MAY</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>The Connection Study For Trauma Informed Care</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>16<sup>th</sup> <span>MAY</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>Contrary to popular belief, Lorem Ipsum is</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>20<sup>th</sup> <span>MAY</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>There are many variations of passages of Lorem Ipsum</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>25<sup>th</sup> <span>MAY</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>1<sup>th</sup> <span>JUN</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>At vero eos et accusamus et iusto odio dignissimos ducimus</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>10<sup>th</sup> <span>JUN</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>On the other hand, we denounce with righteous</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>15<sup>th</sup> <span>JUN</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>At vero eos et accusamus et iusto odio dignissimos ducimus</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+
+
+        <ion-list lines="none" *ngSwitchCase="'past'">
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>25<sup>th</sup> <span>MAY</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>1<sup>th</sup> <span>JUN</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>At vero eos et accusamus et iusto odio dignissimos ducimus</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>10<sup>th</sup> <span>JUN</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>On the other hand, we denounce with righteous</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>14<sup>th</sup> <span>MAY</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>The Connection Study For Trauma Informed Care</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>16<sup>th</sup> <span>MAY</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>Contrary to popular belief, Lorem Ipsum is</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>20<sup>th</sup> <span>MAY</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>There are many variations of passages of Lorem Ipsum</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>15<sup>th</sup> <span>JUN</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>At vero eos et accusamus et iusto odio dignissimos ducimus</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+             <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>25<sup>th</sup> <span>MAY</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>1<sup>th</sup> <span>JUN</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>At vero eos et accusamus et iusto odio dignissimos ducimus</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>10<sup>th</sup> <span>JUN</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>On the other hand, we denounce with righteous</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>14<sup>th</sup> <span>MAY</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>The Connection Study For Trauma Informed Care</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>16<sup>th</sup> <span>MAY</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>Contrary to popular belief, Lorem Ipsum is</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>20<sup>th</sup> <span>MAY</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>There are many variations of passages of Lorem Ipsum</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>15<sup>th</sup> <span>JUN</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>At vero eos et accusamus et iusto odio dignissimos ducimus</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+             <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>25<sup>th</sup> <span>MAY</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>1<sup>th</sup> <span>JUN</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>At vero eos et accusamus et iusto odio dignissimos ducimus</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>10<sup>th</sup> <span>JUN</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>On the other hand, we denounce with righteous</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>14<sup>th</sup> <span>MAY</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>The Connection Study For Trauma Informed Care</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>16<sup>th</sup> <span>MAY</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>Contrary to popular belief, Lorem Ipsum is</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>20<sup>th</sup> <span>MAY</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>There are many variations of passages of Lorem Ipsum</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>15<sup>th</sup> <span>JUN</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>At vero eos et accusamus et iusto odio dignissimos ducimus</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+             <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>25<sup>th</sup> <span>MAY</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>1<sup>th</sup> <span>JUN</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>At vero eos et accusamus et iusto odio dignissimos ducimus</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>10<sup>th</sup> <span>JUN</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>On the other hand, we denounce with righteous</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>14<sup>th</sup> <span>MAY</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>The Connection Study For Trauma Informed Care</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>16<sup>th</sup> <span>MAY</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>Contrary to popular belief, Lorem Ipsum is</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>20<sup>th</sup> <span>MAY</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>There are many variations of passages of Lorem Ipsum</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>15<sup>th</sup> <span>JUN</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>At vero eos et accusamus et iusto odio dignissimos ducimus</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+             <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>25<sup>th</sup> <span>MAY</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>1<sup>th</sup> <span>JUN</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>At vero eos et accusamus et iusto odio dignissimos ducimus</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>10<sup>th</sup> <span>JUN</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>On the other hand, we denounce with righteous</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>14<sup>th</sup> <span>MAY</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>The Connection Study For Trauma Informed Care</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>16<sup>th</sup> <span>MAY</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>Contrary to popular belief, Lorem Ipsum is</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>20<sup>th</sup> <span>MAY</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>There are many variations of passages of Lorem Ipsum</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>15<sup>th</sup> <span>JUN</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>At vero eos et accusamus et iusto odio dignissimos ducimus</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+             <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>25<sup>th</sup> <span>MAY</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>1<sup>th</sup> <span>JUN</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>At vero eos et accusamus et iusto odio dignissimos ducimus</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>10<sup>th</sup> <span>JUN</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>On the other hand, we denounce with righteous</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>14<sup>th</sup> <span>MAY</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>The Connection Study For Trauma Informed Care</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>16<sup>th</sup> <span>MAY</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>Contrary to popular belief, Lorem Ipsum is</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>20<sup>th</sup> <span>MAY</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>There are many variations of passages of Lorem Ipsum</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>15<sup>th</sup> <span>JUN</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>At vero eos et accusamus et iusto odio dignissimos ducimus</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+             <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>25<sup>th</sup> <span>MAY</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>1<sup>th</sup> <span>JUN</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>At vero eos et accusamus et iusto odio dignissimos ducimus</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>10<sup>th</sup> <span>JUN</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>On the other hand, we denounce with righteous</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>14<sup>th</sup> <span>MAY</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>The Connection Study For Trauma Informed Care</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>16<sup>th</sup> <span>MAY</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>Contrary to popular belief, Lorem Ipsum is</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>20<sup>th</sup> <span>MAY</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>There are many variations of passages of Lorem Ipsum</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item (click)="eventsinfo()">
+                <div class="item_inner d-flex">
+                    <div class="events_date">
+                        <h2>15<sup>th</sup> <span>JUN</span></h2>
+                        <h4>11:00 am</h4>
+                    </div>
+                    <div class="text_box">
+                        <h3>At vero eos et accusamus et iusto odio dignissimos ducimus</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                    </div>
+                </div>
+            </ion-item>
+            
+        </ion-list>
+    </div>
+</ion-content>

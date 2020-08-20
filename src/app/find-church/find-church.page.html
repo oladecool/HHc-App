@@ -1,0 +1,94 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>{{'find_church' | translate}} </ion-title>
+    </ion-toolbar>
+    <div class="search_box d-flex">
+        <ion-searchbar mode="md" class="ion-no-padding" searchIcon="hide" placeholder="{{'search_text' | translate}}"></ion-searchbar>
+        <ion-icon class="zmdi zmdi-search ion-text-end"></ion-icon>
+    </div>
+</ion-header>
+
+<ion-content class="bg_img" fullscreen>
+    <div class="map">
+        <img src="assets/imgs/map.png">
+    </div>
+
+    <div class="church_location" style="left:30%; top: 50%;" [ngClass]="faqExpand1 ? 'active' : '' ">
+        <div class="church_details d-flex" (click)="church_info()">
+            <div class="img_box">
+                <img src="assets/imgs/church.jpg">
+            </div>
+            <div class="details">
+                <h2 class="d-flex">St.Mery Church <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+                </h2>
+                <p>Nr Elizaeth Ave, New york, USA</p>
+            </div>
+        </div>
+        <div class="church_icon" (click)="faqExpandToggle1()">
+            <img src="assets/imgs/ic_church.png">
+        </div>
+    </div>
+
+    <div class="church_location" style="left: 0%; top: 70%;" [ngClass]="faqExpand2 ? 'active' : '' ">
+        <div class="church_details d-flex" (click)="church_info()">
+            <div class="img_box">
+                <img src="assets/imgs/church.jpg">
+            </div>
+            <div class="details">
+                <h2 class="d-flex">
+                    <span>St.Mery Church</span>
+                    <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+                </h2>
+                <p>Nr Elizaeth Ave, New york, USA</p>
+            </div>
+        </div>
+        <div class="church_icon" (click)="faqExpandToggle2()">
+            <img src="assets/imgs/ic_church.png">
+        </div>
+    </div>
+
+    <div class="church_location" style="left: -9%; bottom: 45%" [ngClass]="faqExpand3 ? 'active' : '' ">
+        <div class="church_details d-flex" (click)="church_info()">
+            <div class="img_box">
+                <img src="assets/imgs/church.jpg">
+            </div>
+            <div class="details">
+                <h2 class="d-flex">
+                    <span>St.Mery Church </span>
+                    <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+                </h2>
+                <p>Nr Elizaeth Ave, New york, USA</p>
+            </div>
+        </div>
+        <div class="church_icon" (click)="faqExpandToggle3()">
+            <img src="assets/imgs/ic_church.png">
+        </div>
+    </div>
+    <div class="church_location" style="left: 16%; top: 14%;" [ngClass]="faqExpand4 ? 'active' : '' ">
+        <div class="church_details d-flex" (click)="church_info()">
+            <div class="img_box">
+                <img src="assets/imgs/church.jpg">
+            </div>
+            <div class="details">
+                <h2 class="d-flex">
+                    <span>St.Mery Church</span>
+                    <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+                </h2>
+                <p>Nr Elizaeth Ave, New york, USA</p>
+            </div>
+        </div>
+        <div class="church_icon" (click)="faqExpandToggle4()">
+            <img src="assets/imgs/ic_church.png">
+        </div>
+    </div>
+
+    <ion-fab vertical="bottom" horizontal="end"  slot="fixed">
+        <ion-fab-button>
+            <ion-icon class="zmdi zmdi-gps-dot"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+</ion-content>

@@ -1,0 +1,14 @@
+.text-box {
+    width: calc(100% - 16px);
+    margin: auto;
+    background: var(--white);
+    padding: 22px 28px;
+
+    p {
+       margin: 0;
+    margin-bottom: 16px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    line-height: 20px;
+    }
+}

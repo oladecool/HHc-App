@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+          <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>{{'Notes' | translate}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen class="bg_img">
+  
+</ion-content>
+
+<ion-footer>
+  <!-- float action button placed at the end and bottom of screen -->
+<ion-fab vertical="bottom" horizontal="end">
+  <ion-fab-button >
+      <ion-icon name="create" (click)="addNote()"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+</ion-footer>

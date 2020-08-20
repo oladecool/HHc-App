@@ -1,0 +1,214 @@
+ion-header {
+    padding-bottom: 14px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.47);
+        backdrop-filter: blur(4px);
+
+    }
+
+    ion-toolbar {
+        &::before {
+            display: none;
+        }
+    }
+
+    .search_box {
+        //        background: var(--item_bg);
+        border-radius: 3px;
+        padding: 3px 14px;
+        width: calc(100% - 40px);
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        z-index: 11;
+
+        ion-icon {
+            color: var(--white);
+            font-size: 1.1rem;
+            min-width: 24px;
+        }
+
+        ion-searchbar {
+            --background: var(--transparent);
+            --box-shadow: none;
+            --color: var(--white);
+            --placeholder-color: var(--white);
+            --placeholder-opacity: 1;
+            padding: 5px 0 !important;
+            --cancel-button-color: var(--white);
+            --clear-button-color: var(--white);
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(253, 253, 253, 0.39);
+            backdrop-filter: blur(5px);
+            opacity: .9;
+
+        }
+
+    }
+}
+
+
+.map {
+    position: absolute;
+    top: 119px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: calc(100% - 119px);
+
+    img {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+}
+
+
+.church_location {
+    z-index: 99;
+    position: absolute;
+    height: 127px;
+    min-width: 280px;
+    max-width: 280px;
+
+    .church_icon {
+        width: 35px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+
+    .church_details {
+        background: var(--white);
+        border-radius: 10px;
+        //overflow: visible;
+        min-width: 280px;
+        max-width: 280px;
+        width: 280px;
+        height: 75px;
+        position: absolute;
+        display: none !important;
+        white-space: nowrap;
+        z-index: 99;
+
+
+        .img_box {
+            min-width: 75px;
+            width: 75px;
+            height: 75px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 7px 0 0 7px;
+
+            img {
+                position: absolute;
+                left: -50% !important;
+                right: -50% !important;
+                bottom: 0 !important;
+                top: 0 !important;
+                margin: auto !important;
+                height: 100% !important;
+                width: 100%;
+                border-radius: 0;
+            }
+        }
+
+        .details {
+            padding: 0 10px;
+            width: 100%;
+            overflow: hidden;
+
+            h2 {
+                margin: 0;
+                font-size: .9rem;
+                font-weight: 900;
+                padding-bottom: 2px;
+                color: var(--text-black);
+                letter-spacing: .5px;
+
+                span {
+                    display: block;
+                    width: calc(100% - 25px);
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
+
+                ion-icon {
+                    color: var(--primary);
+                    font-size: 1.3rem;
+                    min-width: 20px;
+                }
+            }
+
+            p {
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                margin: 0;
+                color: var(--text-light);
+                font-size: .8rem;
+                font-weight: 500;
+                opacity: .7;
+
+            }
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            right: 0;
+            width: 13px;
+            height: 13px;
+            background: var(--white);
+            margin: 0 auto;
+            transform: rotate(45deg);
+        }
+    }
+
+    &.active {
+        z-index: 999;
+
+        .church_details {
+            display: flex !important;
+        }
+
+    }
+}
+
+ion-fab {
+    ion-fab-button {
+        --background: var(--item_bg);
+        width: 47px;
+        height: 47px;
+
+        ion-icon {
+            font-size: 1.65rem;
+        }
+    }
+}

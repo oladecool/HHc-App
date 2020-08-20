@@ -1,0 +1,56 @@
+<ion-header>
+    <ion-toolbar> 
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            <div class="title_inner d-flex"> {{'my_profile' | translate}} </div>
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen class="bg_img">
+    <div class="scholar">
+        <div class="scholar_img center_img">
+            <img src="assets/imgs/profile_pic.png" class="crop_img">
+        </div>
+        <p class="ion-text-center">{{'change_profili_photo' | translate}}</p>
+    </div>
+
+    <div class="form">
+        <ion-list lines="none">
+            <ion-item lines="none">
+                <div class="item_inner d-flex">
+                    <ion-icon class="zmdi zmdi-account ion-text-start"></ion-icon>
+                    <div class="input_field">
+                        <ion-label position="stacked">{{'name' | translate}}</ion-label>
+                        <ion-input mode="md" type="name" value="Sam Smith"></ion-input>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item lines="none">
+                <div class="item_inner d-flex">
+                    <ion-icon class="zmdi zmdi-email ion-text-start"></ion-icon> 
+                    <div class="input_field">
+                          <ion-label position="stacked">{{'e_mail' | translate}}</ion-label>
+                        <ion-input mode="md" type="email"  value="samsmith@mailcom"></ion-input>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item lines="none">
+                <div class="item_inner d-flex">
+                    <ion-icon class="zmdi zmdi-lock ion-text-start"></ion-icon>
+                      <div class="input_field">
+                        <ion-label position="stacked">{{'update_password' | translate}}</ion-label>
+                        <ion-input mode="md" type="password" value="Mhd.Amir"></ion-input>
+                    </div>
+                </div>
+            </ion-item>
+  
+        </ion-list>
+    </div>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+    <ion-button size="large" expand="full" class="btn">{{'update_profile' | translate}}</ion-button>
+</ion-footer>

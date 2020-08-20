@@ -1,0 +1,107 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            <div class="title_inner d-flex">
+                <ion-icon class="zmdi zmdi-translate end ion-text-end" (click)="select_language()"></ion-icon>
+            </div>
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen class="bg_img">
+    <div class="logo ion-text-center">
+        <!--        <img src="assets/imgs/logo.png">-->
+        <h1 class="ion-text-center">HolyHill<span>Chapel</span></h1>
+    </div>
+    <div class="menu-item-container">
+        <ion-row>
+            <ion-col size="4" (click)="bible()">
+                <div class="menu-item">
+                    <img src="assets/imgs/ic_bible.png">
+                    <p>{{'bible' | translate}}</p>
+                </div>
+            </ion-col>
+            <ion-col size="4" (click)="books()">
+                <div class="menu-item">
+                    <img src="assets/imgs/ic_book.png">
+                    <p>{{'books' | translate}}</p>
+                </div>
+            </ion-col>
+            <ion-col size="4" (click)="notes()">
+                <div class="menu-item">
+                    <img src="assets/imgs/ic_chat.png">
+                    <p>{{'Notes' | translate}}</p>
+                </div>
+            </ion-col>
+            <ion-col size="4" (click)="movies()">
+                <div class="menu-item">
+                    <img src="assets/imgs/ic_gallery.png">
+                    <p>{{'video' | translate}}</p>
+                </div>
+            </ion-col>
+            <ion-col size="4" (click)="prayers()">
+                <div class="menu-item">
+                    <img src="assets/imgs/ic_prayer.png">
+                    <p>{{'prayers' | translate}}</p>
+                </div>
+            </ion-col>
+            <ion-col size="4" (click)="find_church()">
+                <div class="menu-item">
+                    <img src="assets/imgs/ic_church.png">
+                    <p>{{'find_church' | translate}}</p>
+                </div>
+            </ion-col>
+            <ion-col size="4" (click)="events()">
+                <div class="menu-item">
+                    <img src="assets/imgs/ic_events.png">
+                    <p>{{'events' | translate}}</p>
+                </div>
+            </ion-col>
+            <ion-col size="4" (click)="prayer_time()">
+                <div class="menu-item">
+                    <img src="assets/imgs/ic_prayer_time.png">
+                    <p>{{'prayer_times' | translate}}</p>
+                </div>
+            </ion-col>
+            <ion-col size="4" (click)="live_stream()">
+                <div class="menu-item">
+                    <img src="assets/imgs/ic_prayer_time.png">
+                    <p>{{'live_stream' | translate}}</p>
+                </div>
+            </ion-col>
+            <ion-col size="4" (click)="podcast()">
+                <div class="menu-item">
+                    <img src="assets/imgs/ic_prayer_time.png">
+                    <p>{{'podcast' | translate}}</p>
+                </div>
+            </ion-col>
+            <ion-col size="4">
+                <div class="menu-item">
+                    <img src="assets/imgs/ic_share.png">
+                    <p>{{'share_app' | translate}}</p>
+                </div>
+            </ion-col>
+            <ion-col size="4">
+                <div class="menu-item">
+                    <img src="assets/imgs/ic_web.png">
+                    <p>{{'website' | translate}}</p>
+                </div>
+            </ion-col>
+            <ion-col size="4" (click)="feedback()">
+                <div class="menu-item">
+                    <img src="assets/imgs/ic_feedback.png">
+                    <p>{{'feedback' | translate}}</p>
+                </div>
+            </ion-col>
+            <ion-col size="4" (click)="testimonies()">
+                <div class="menu-item">
+                    <img src="assets/imgs/ic_chat.png">
+                    <p>{{'Testimony' | translate}}</p>
+                </div>
+            </ion-col>
+        </ion-row>
+    </div>
+</ion-content>

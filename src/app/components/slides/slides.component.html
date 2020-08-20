@@ -1,0 +1,32 @@
+  <ion-content class="ion-text-center">
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <ion-img src="assets/images/logo.png"></ion-img>
+                <ion-slides pager="true" loop="true">
+                    <ion-slide>
+                        <div class="splash-info ion-padding-top">
+                            <div class="splash-intro">
+                                <h5>Welcome to Holy Hill Chapel Service App</h5>
+                            </div>
+                        </div>
+                    </ion-slide>
+
+                    <ion-slide>
+                        <div class="splash-info ion-padding-top">
+                            <div class="splash-intro">
+                                <h5>Contribute your ideas to improve the customer service of your organization</h5>
+                            </div>
+                        </div>
+                    </ion-slide>
+                </ion-slides>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-button class="button-size center-button" expand="block" (click)="getStarted();">Get started</ion-button>
+                <div class="m-top"><span>Have an account? <a routerLink ="['/sign-in']" >login</a></span></div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

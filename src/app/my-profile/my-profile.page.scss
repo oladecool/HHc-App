@@ -1,0 +1,73 @@
+//ion-header ion-toolbar {
+//    --background: var(--item_bg);
+//
+//    &::before {
+//        display: none;
+//    }
+//}
+
+ion-header ion-toolbar ion-title {
+    .title_inner {
+        ion-icon {
+            color: var(--white);
+            font-size: 1.8rem;
+        }
+    }
+}
+
+.scholar {
+    background: var(--item_bg);
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 12px;
+
+    .scholar_img {
+        width: 190px;
+        height: 190px;
+        border-radius: 50%;
+        margin: 0 auto;
+        margin-bottom: 25px;
+        box-shadow: 0px 11px 16px 0px rgba(0, 0, 0, 0.53);
+    }
+
+    p {
+        margin: 0;
+        color: var(--white);
+        font-size: .8rem;
+        font-weight: 400;
+        opacity: .5;
+    }
+}
+
+.form {
+    ion-list {
+        ion-item {
+            .input_field {
+                padding-top: 10px;
+
+                ion-label {
+                    color: var(--white);
+                    color: var(--white) !important;
+                    text-transform: unset;
+                    opacity: .5;
+                    margin-bottom: 0 !important;
+                }
+
+                ion-input {
+                    --padding-top: 0px !important;
+                    --padding-bottom: 10px !important;
+                    font-size: 1.1rem !important;
+                    
+                }
+            }
+        }
+    }
+}
+
+ion-footer{
+    z-index: 99;
+    .button.btn{
+        text-transform: none !important;
+    }
+}

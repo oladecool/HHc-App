@@ -1,0 +1,107 @@
+ion-header {
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.47);
+        -webkit-backdrop-filter: blur(4px);
+        backdrop-filter: blur(4px);
+    }
+
+    ion-toolbar::before {
+        display: none;
+    }
+
+    .banner {
+        position: relative;
+        z-index: 11;
+        padding: 18px 24px 17px 24px;
+
+        h2 {
+            margin: 0;
+            color: var(--white);
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+    }
+
+}
+
+ion-card {
+    background: var(--white);
+    box-shadow: none !important;
+    width: calc(100% - 17px);
+    border-radius: 4px;
+    margin: 14px auto;
+    .card_content {
+        position: relative;
+        width: 100%;
+        padding: 21px 23px 21px 23px;
+        text-align: initial;
+
+        p {
+            color: var(--text-black);
+            margin: 0;
+            font-size: 0.95rem;
+            line-height: 21px;
+            padding-bottom: 17px;
+            font-weight: 500;
+        }
+    }
+}
+
+ion-slide {
+    display: block;
+    width: 100%;
+}
+
+ion-footer {
+    background: var(--white);
+    width: calc(100% - 17px);
+    margin: 0 auto;
+    padding: 18px 18px 18px 18px;
+
+    ion-row {
+        align-items: center;
+
+        ion-col {
+            .button.btn {
+                width: 35px;
+                height: 35px;
+                --border-radius: 50% !important;
+                --padding-start: 0;
+                --padding-end: 0;
+
+                ion-icon {
+                    font-size: 1.5rem;
+                    text-align: center;
+
+                    &.zmdi-chevron-left {
+                        position: relative;
+                        left: -1px;
+                    }
+
+                    &.zmdi-chevron-right {
+                        position: relative;
+                        right: -1px;
+                    }
+                }
+            }
+
+            h3 {
+                color: #808080;
+                font-size: 1rem;
+                font-weight: 500;
+                background: rgba(212, 212, 212, 0.6196078431372549);
+                width: fit-content;
+                margin: 0 auto;
+                border-radius: 50px;
+                padding: 6px 16px;
+            }
+
+        }
+    }
+}

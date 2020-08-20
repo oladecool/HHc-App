@@ -1,0 +1,51 @@
+ion-header ion-toolbar ion-title {
+    padding: 0 15px !important;
+    text-align: center !important;
+}
+
+.payment-success {
+    .img-box {
+        padding: 60px 0;
+        position: relative;
+        z-index: 22;
+        width: fit-content;
+        display: block;
+        margin: auto;
+
+        img {
+            width: 190px;
+        }
+    }
+
+    .text-box {
+        background: var(--item_bg);
+        position: relative;
+        z-index: 22;
+        color: var(--white);
+        padding: 24px;
+
+        h4 {
+            margin: 0;
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding-bottom: 24px;
+        }
+
+        p {
+            margin: 0 auto;
+            letter-spacing: 0.5px;
+            line-height: 20px;
+            font-size: .8rem;
+        }
+
+        .button.btn {
+            width: 230px;
+            margin: 0 auto;
+            --border-radius: 4px !important;
+            margin-top: 54px;
+            text-transform: none !important;
+        }
+    }
+}
+
+

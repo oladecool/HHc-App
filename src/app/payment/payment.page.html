@@ -1,0 +1,33 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>{{'done' | translate}}</ion-title>
+        <!--        <ion-title>{{'fail' | translate}}</ion-title> -->
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_img" fullscreen>
+    <div class="payment-success ion-text-center">
+        <div class="img-box">
+            <img src="assets/imgs/ic_payment_success.png">
+        </div>
+        <div class="text-box">
+            <h4>{{'payment_successfull' | translate}}</h4>
+            <p>{{'payment_successfull_massage' | translate}}<br>{{'processed_with' | translate}} $5.00 for <br>1 month</p>
+            <ion-button size="large" expand="block" class="btn" (click)="father_profile()">{{'continue' | translate}}</ion-button>
+        </div>
+    </div>
+
+<!--
+    <div class="payment-success ion-text-center payment-fail">
+        <div class="img-box">
+            <img src="assets/imgs/ic_payment_fail.png">
+        </div>
+        <div class="text-box">
+            <h4>{{'payment_unsuccessfull' | translate}}</h4>
+            <p>{{'payment_unsuccessfull_massage' | translate}}<br>{{'processed_due_to' | translate}}<br>server error</p> 
+            
+              <ion-button size="large" expand="block" class="btn">{{'try_again' | translate}}</ion-button>
+        </div>
+    </div>
+-->
+</ion-content>

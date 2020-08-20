@@ -1,0 +1,72 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            <div class="title_inner d-flex">
+                <div class="center_img profile_img">
+                    <img src="assets/imgs/f3.png" class="crop_img">
+                </div>
+                <h2>Father Johnson</h2>     
+            </div>
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen class="bg_img">
+    <div class="chat_container d-flex">
+        <div class="chat_box d-flex received">
+            <div class="chat_details">
+                <div class="chat">
+                    <h2>Lorem ipsum dolor sit amet,<br>consectetur adipisicing elit,</h2>
+                    <p>11:40 am</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat_box d-flex send">
+            <div class="chat_details">
+                <div class="chat">
+                    <h2>Consectetur adipisicing elit send do ernul</h2>
+                    <p>11:45 am</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat_box d-flex received">
+            <div class="chat_details">
+                <div class="chat">
+                    <h2>Adipisicing elit, send do ernul.</h2>
+                    <p>11:47 am</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat_box d-flex send">
+            <div class="chat_details">
+                <div class="chat">
+                    <h2>Thnak you</h2>
+                    <p>11:48 am</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</ion-content>
+
+
+<ion-footer class="ion-no-border">
+    <div class="form" lines="none">
+        <ion-item lines="none">
+            <div class="item_inner d-flex">
+                <h3>
+                    <ion-icon class="zmdi zmdi-mood ion-text-start"></ion-icon>
+                </h3>
+                <ion-input mode="md" type="text" placeholder="{{'write_your_message' | translate}}"></ion-input>
+                <div class="send_button">
+                    <ion-icon class="zmdi zmdi-mail-send ion-text-end"></ion-icon>
+                </div>
+            </div>
+        </ion-item>
+    </div>
+</ion-footer>

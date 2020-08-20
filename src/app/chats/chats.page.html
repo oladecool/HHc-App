@@ -1,0 +1,604 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            <div class="title_inner d-flex">
+                {{'chat_with_father' | translate}}
+            </div>
+        </ion-title>
+    </ion-toolbar>
+
+    <ion-segment [(ngModel)]="tab" lines="none" mode="md">
+        <ion-segment-button value="chats" mode="md">
+            <ion-label>{{'chats' | translate}}</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="fathers" mode="md">
+            <ion-label>{{'fathers' | translate}}</ion-label>
+        </ion-segment-button>
+    </ion-segment>
+</ion-header>
+
+<ion-content class="bg_img" fullscreen>
+    <div [ngSwitch]="tab">
+        <ion-list lines="none" *ngSwitchCase="'chats'">
+            <ion-item (click)="chatscreen()">
+                <div class="item_inner d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/imgs/f1.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">Father Sozomen <span class="end">2</span></h2>
+                        <p>That's Good my son!</p>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item (click)="chatscreen()">
+                <div class="item_inner d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/imgs/f2.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">Father Johnson <span class="end">1</span></h2>
+                        <p>Belive in faith</p>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item (click)="chatscreen()">
+                <div class="item_inner d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/imgs/f3.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h2>Father Terence</h2>
+                        <p>Tel me about your cancer.</p>
+                    </div>
+                </div>
+            </ion-item>
+
+
+            <ion-item (click)="chatscreen()">
+                <div class="item_inner d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/imgs/f1.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">Father Sozomen</h2>
+                        <p>That's Good my son!</p>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item (click)="chatscreen()">
+                <div class="item_inner d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/imgs/f2.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">Father Johnson </h2>
+                        <p>Belive in faith</p>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item (click)="chatscreen()">
+                <div class="item_inner d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/imgs/f3.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h2>Father Terence</h2>
+                        <p>Tel me about your cancer.</p>
+                    </div>
+                </div>
+            </ion-item>
+            
+                <ion-item (click)="chatscreen()">
+                <div class="item_inner d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/imgs/f1.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">Father Sozomen</h2>
+                        <p>That's Good my son!</p>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item (click)="chatscreen()">
+                <div class="item_inner d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/imgs/f2.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">Father Johnson </h2>
+                        <p>Belive in faith</p>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item (click)="chatscreen()">
+                <div class="item_inner d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/imgs/f3.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h2>Father Terence</h2>
+                        <p>Tel me about your cancer.</p>
+                    </div>
+                </div>
+            </ion-item>
+            
+                <ion-item (click)="chatscreen()">
+                <div class="item_inner d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/imgs/f1.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">Father Sozomen</h2>
+                        <p>That's Good my son!</p>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item (click)="chatscreen()">
+                <div class="item_inner d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/imgs/f2.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">Father Johnson </h2>
+                        <p>Belive in faith</p>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item (click)="chatscreen()">
+                <div class="item_inner d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/imgs/f3.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h2>Father Terence</h2>
+                        <p>Tel me about your cancer.</p>
+                    </div>
+                </div>
+            </ion-item>
+            
+            
+                <ion-item (click)="chatscreen()">
+                <div class="item_inner d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/imgs/f1.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">Father Sozomen</h2>
+                        <p>That's Good my son!</p>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item (click)="chatscreen()">
+                <div class="item_inner d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/imgs/f2.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">Father Johnson </h2>
+                        <p>Belive in faith</p>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item (click)="chatscreen()">
+                <div class="item_inner d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/imgs/f3.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h2>Father Terence</h2>
+                        <p>Tel me about your cancer.</p>
+                    </div>
+                </div>
+            </ion-item>
+            
+            
+                <ion-item (click)="chatscreen()">
+                <div class="item_inner d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/imgs/f1.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">Father Sozomen</h2>
+                        <p>That's Good my son!</p>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item (click)="chatscreen()">
+                <div class="item_inner d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/imgs/f2.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">Father Johnson </h2>
+                        <p>Belive in faith</p>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item (click)="chatscreen()">
+                <div class="item_inner d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/imgs/f3.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h2>Father Terence</h2>
+                        <p>Tel me about your cancer.</p>
+                    </div>
+                </div>
+            </ion-item>
+            
+            
+                <ion-item (click)="chatscreen()">
+                <div class="item_inner d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/imgs/f1.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">Father Sozomen</h2>
+                        <p>That's Good my son!</p>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item (click)="chatscreen()">
+                <div class="item_inner d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/imgs/f2.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">Father Johnson </h2>
+                        <p>Belive in faith</p>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item (click)="chatscreen()">
+                <div class="item_inner d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/imgs/f3.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h2>Father Terence</h2>
+                        <p>Tel me about your cancer.</p>
+                    </div>
+                </div>
+            </ion-item>
+            
+            
+                <ion-item (click)="chatscreen()">
+                <div class="item_inner d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/imgs/f1.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">Father Sozomen</h2>
+                        <p>That's Good my son!</p>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item (click)="chatscreen()">
+                <div class="item_inner d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/imgs/f2.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">Father Johnson </h2>
+                        <p>Belive in faith</p>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item (click)="chatscreen()">
+                <div class="item_inner d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/imgs/f3.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h2>Father Terence</h2>
+                        <p>Tel me about your cancer.</p>
+                    </div>
+                </div>
+            </ion-item>
+            
+                <ion-item (click)="chatscreen()">
+                <div class="item_inner d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/imgs/f1.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">Father Sozomen</h2>
+                        <p>That's Good my son!</p>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item (click)="chatscreen()">
+                <div class="item_inner d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/imgs/f2.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">Father Johnson </h2>
+                        <p>Belive in faith</p>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item (click)="chatscreen()">
+                <div class="item_inner d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/imgs/f3.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h2>Father Terence</h2>
+                        <p>Tel me about your cancer.</p>
+                    </div>
+                </div>
+            </ion-item>
+            
+                <ion-item (click)="chatscreen()">
+                <div class="item_inner d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/imgs/f1.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">Father Sozomen</h2>
+                        <p>That's Good my son!</p>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item (click)="chatscreen()">
+                <div class="item_inner d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/imgs/f2.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">Father Johnson </h2>
+                        <p>Belive in faith</p>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item (click)="chatscreen()">
+                <div class="item_inner d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/imgs/f3.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h2>Father Terence</h2>
+                        <p>Tel me about your cancer.</p>
+                    </div>
+                </div>
+            </ion-item>
+            
+                <ion-item (click)="chatscreen()">
+                <div class="item_inner d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/imgs/f1.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">Father Sozomen</h2>
+                        <p>That's Good my son!</p>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item (click)="chatscreen()">
+                <div class="item_inner d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/imgs/f2.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">Father Johnson </h2>
+                        <p>Belive in faith</p>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item (click)="chatscreen()">
+                <div class="item_inner d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/imgs/f3.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h2>Father Terence</h2>
+                        <p>Tel me about your cancer.</p>
+                    </div>
+                </div>
+            </ion-item>
+            
+                <ion-item (click)="chatscreen()">
+                <div class="item_inner d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/imgs/f1.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">Father Sozomen</h2>
+                        <p>That's Good my son!</p>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item (click)="chatscreen()">
+                <div class="item_inner d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/imgs/f2.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h2 class="d-flex">Father Johnson </h2>
+                        <p>Belive in faith</p>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item (click)="chatscreen()">
+                <div class="item_inner d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/imgs/f3.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h2>Father Terence</h2>
+                        <p>Tel me about your cancer.</p>
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+
+        <ion-list lines="none" *ngSwitchCase="'fathers'">
+            <ion-item (click)="setViewType('active')">
+                <div class="item_inner d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/imgs/f3.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h2>Father Johnson</h2>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item (click)="setViewType('active')">
+                <div class="item_inner d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/imgs/f2.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h2>Father Johnson</h2>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item (click)="setViewType('active')">
+                <div class="item_inner d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/imgs/f1.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h2>Father Sozomen</h2>
+                    </div>
+                </div>
+            </ion-item>
+             <ion-item (click)="setViewType('active')">
+                <div class="item_inner d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/imgs/f3.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h2>Father Johnson</h2>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item (click)="setViewType('active')">
+                <div class="item_inner d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/imgs/f2.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h2>Father Johnson</h2>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item (click)="setViewType('active')">
+                <div class="item_inner d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/imgs/f1.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h2>Father Sozomen</h2>
+                    </div>
+                </div>
+            </ion-item> <ion-item (click)="setViewType('active')">
+                <div class="item_inner d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/imgs/f3.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h2>Father Johnson</h2>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item (click)="setViewType('active')">
+                <div class="item_inner d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/imgs/f2.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h2>Father Johnson</h2>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item (click)="setViewType('active')">
+                <div class="item_inner d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/imgs/f1.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h2>Father Sozomen</h2>
+                    </div>
+                </div>
+            </ion-item> <ion-item (click)="setViewType('active')">
+                <div class="item_inner d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/imgs/f3.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h2>Father Johnson</h2>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item (click)="setViewType('active')">
+                <div class="item_inner d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/imgs/f2.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h2>Father Johnson</h2>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item (click)="setViewType('active')">
+                <div class="item_inner d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/imgs/f1.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h2>Father Sozomen</h2>
+                    </div>
+                </div>
+            </ion-item> <ion-item (click)="setViewType('active')">
+                <div class="item_inner d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/imgs/f3.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h2>Father Johnson</h2>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item (click)="setViewType('active')">
+                <div class="item_inner d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/imgs/f2.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h2>Father Johnson</h2>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item (click)="setViewType('active')">
+                <div class="item_inner d-flex">
+                    <div class="img_box center_img">
+                        <img src="assets/imgs/f1.png" class="crop_img">
+                    </div>
+                    <div class="text_box">
+                        <h2>Father Sozomen</h2>
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+    </div>
+
+
+    <div [ngClass]="viewType == 'active' ? 'purchase_a_plan active':'purchase_a_plan'" (click)="setViewType(null)">
+        <ion-list lines="none">
+            <h2>{{'purchase_a_plan' | translate}}</h2>
+            <p>{{'purchase_plan_text' | translate}}</p>
+
+            <h3 class="d-flex">
+                <span class="cancel_text">{{'cancel' | translate}}</span>
+                <span class="end" (click)="plan()">{{'view_plans' | translate}}</span>
+            </h3>
+        </ion-list>
+    </div>
+</ion-content>
