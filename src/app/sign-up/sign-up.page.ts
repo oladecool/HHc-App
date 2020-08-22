@@ -12,6 +12,8 @@ export class SignUpPage implements OnInit {
 
   ngOnInit() {
   }
+
+  
  home() {
     this.navCtrl.navigateRoot(['./home']);
   } 

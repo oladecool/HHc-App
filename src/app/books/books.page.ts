@@ -2,6 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ApiService } from '../services/api.service';
 
+
+interface Books {
+  data: Array<[]>;
+}
+
 @Component({
   selector: 'app-books',
   templateUrl: './books.page.html',
@@ -21,15 +26,15 @@ export class BooksPage implements OnInit {
   }
 
   getBooks(){
-    this.api.get('books').subscribe((data: any[]) => {
-      console.log(data);
-      this.books = data; this.filtered = data;
+    this.api.get('books').subscribe((res: Books) => {
+      console.log(res.data);
+      this.books = res.data; 
+      this.filtered = res.data;
     })  
   }
 
   bookinfo() {
-    // this.route.navigate(['./books-info']);
-    
+    this.route.navigate(['./books-info']);
   }  
 
   init() {
