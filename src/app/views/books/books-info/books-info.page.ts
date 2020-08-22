@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../services/api.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
-import { Books } from '../interface/books';
+import { Books } from '../../interface/books';
 
 @Component({
   selector: 'app-books-info',
@@ -25,9 +25,9 @@ export class BooksInfoPage implements OnInit {
   }
 
   getBooks(id){
-    this.api.get('books').subscribe((data: any[]) => {
+    this.api.get('books/'+id).subscribe((data: any) => {
       console.log(data);
-      this.books = data; this.filtered = data;
+      this.book = data;
     })  
   }
 

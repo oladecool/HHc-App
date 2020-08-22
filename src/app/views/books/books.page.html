@@ -13,13 +13,12 @@
 
     <div class="book_row" >
         <ion-row>
-            <ion-col size="6" *ngFor="let b of filtered| keyvalue">
-                <div class="book" (click)="bookinfo()">
-                    <div class="book_img center_img">
-                        <img src="assets/imgs/book1.png" class="crop_img">
-                        <!-- <img [src]="b.cover" class="crop_img" height="105px" width="153px"> -->
+            <ion-col size="6" *ngFor="let book of books | keyvalue">
+                <div class="book" (click)="bookinfo(book)">
+                    <div class="book_img center_img" style="height: 150px; width: 120px;">
+                        <img src="assets/imgs/book1.png" class="crop_img" />
                     </div>
-                    <p class="ion-text-center">{{b.title}}</p>
+                    <p class="ion-text-center">{{book.title}}</p>
                 </div>
             </ion-col>   
         </ion-row>

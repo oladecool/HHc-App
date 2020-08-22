@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: BooksPage
+  },
+  {
+    path: 'books/:id',
+    loadChildren: () => import('./books-info/books-info.module').then( m => m.BooksInfoPageModule)
   }
 ];
 

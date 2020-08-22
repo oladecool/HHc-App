@@ -21,7 +21,6 @@ export class BooksPage implements OnInit {
   constructor(private route: Router, private api: ApiService) { }
 
   ngOnInit() {
-    this.init();
     this.getBooks();
   }
 
@@ -33,13 +32,13 @@ export class BooksPage implements OnInit {
     })  
   }
 
-  bookinfo() {
-    this.route.navigate(['./books-info']);
+  bookinfo(book) {
+    this.route.navigate([book.id]);
   }  
 
-  init() {
-    this.book = { 
-      title: '', description: '', cover: '', price: '' 
-    };
-  }
+  // init() {
+  //   this.book = { 
+  //     title: '', description: '', cover: '', price: '' 
+  //   };
+  // }
 }

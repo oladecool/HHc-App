@@ -13,7 +13,7 @@
     </div>
     <h2 class="ion-text-center ion-text-uppercase"><strong>{{'register' | translate}}</strong> {{'now' | translate}}</h2>
 
-    <div class="form">
+    <div class="form" method="POST" #signUpForm="ngForm" (ngSubmit)="signUp()">
         <ion-list lines="none">
             <ion-item lines="none">
                 <div class="item_inner d-flex">
