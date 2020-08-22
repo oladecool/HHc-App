@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../services/api.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 import { Books } from '../interface/books';
 
@@ -15,15 +15,16 @@ export class BooksInfoPage implements OnInit {
   filtered: any[] = [];
   book: any;
 
-  constructor(private api: ApiService, private route: ActivatedRoute) { }
+  constructor(private api: ApiService, private router: Router, private rout: ActivatedRoute) { }
 
   ngOnInit() {
-    const id = this.route.snapshot.paramMap.get('id');
     this.init();
-    this.getBooks();
+    if(this.rout.snapshot.paramMap.has('id')){
+      this.getBooks(this.rout.snapshot.paramMap.get('id'));
+    }
   }
 
-  getBooks(){
+  getBooks(id){
     this.api.get('books').subscribe((data: any[]) => {
       console.log(data);
       this.books = data; this.filtered = data;

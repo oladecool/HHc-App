@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ApiService } from '../services/api.service';
-import { NotificationService } from '../services/notification.service';
 
 @Component({
   selector: 'app-books',
@@ -14,7 +13,7 @@ export class BooksPage implements OnInit {
   filtered: any[] = [];
   book: any;
 
-  constructor(private route: Router, private api: ApiService, private notify: NotificationService) { }
+  constructor(private route: Router, private api: ApiService) { }
 
   ngOnInit() {
     this.init();
@@ -29,7 +28,8 @@ export class BooksPage implements OnInit {
   }
 
   bookinfo() {
-    this.route.navigate(['./books-info']);
+    // this.route.navigate(['./books-info']);
+    
   }  
 
   init() {
