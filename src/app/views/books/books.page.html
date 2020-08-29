@@ -13,10 +13,10 @@
 
     <div class="book_row" >
         <ion-row>
-            <ion-col size="6" *ngFor="let book of books | keyvalue">
+            <ion-col size="6" *ngFor="let book of books">
                 <div class="book" (click)="bookinfo(book)">
                     <div class="book_img center_img" style="height: 150px; width: 120px;">
-                        <img src="assets/imgs/book1.png" class="crop_img" />
+                        <img src="{{book.cover}}" class="crop_img" />
                     </div>
                     <p class="ion-text-center">{{book.title}}</p>
                 </div>

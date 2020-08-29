@@ -16,16 +16,23 @@ export class AuthInterceptor implements HttpInterceptor {
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
         this.cur = req.url;
         this.url = this.cur.split('/').slice(-2)[0]; // console.log(this.url);
+        if (this.url === 'upload') {
+            req = req.clone({
+                setHeaders: {
+                    'Access-Control-Allow-Origin': '*',
+                    Authorization: `Bearer ${this.jwtHelper.tokenGetter()}`
+                }
+            });
+        } else {
             req = req.clone({
                 setHeaders: {
                     'Content-Type': 'application/json',
                     'Access-Control-Allow-Origin': '*',
-                    'Cache-Control': 'no-cache',
-                    Pragma: 'no-cache',
                     Authorization: `Bearer ${this.jwtHelper.tokenGetter()}`
                     // Authorization: `Bearer ` + this.jwtHelper.tokenGetter()
                 }
             });
+        }
         // this.error.request(req);
         return next.handle(req).pipe(tap((event: HttpEvent<any>) => {
             if (event instanceof HttpResponse) {
@@ -44,7 +51,7 @@ export class AuthInterceptor implements HttpInterceptor {
                 if (err.status === 401) {
                     this.notify.error('Login Session Expired Please Login Again');
                     localStorage.removeItem('HHC');
-                    return this.router.navigate(['/sign-in']);
+                    return this.router.navigate(['/login']);
                 }
             }
             const msg = err.error.message || err.message;

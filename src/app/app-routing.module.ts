@@ -3,15 +3,11 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   { 
-    path: '',redirectTo: 'welcome', pathMatch: 'full'
+    path: '',redirectTo: 'sign-up', pathMatch: 'full'
   },
   {
     path: 'folder/:id',
     loadChildren: () => import('./views/folder/folder.module').then( m => m.FolderPageModule)
-  },
-  {
-    path: 'welcome',
-    loadChildren: () => import('./views/welcome/welcome.module').then( m => m.WelcomePageModule)
   },
   {
     path: 'sign-in',
@@ -116,10 +112,6 @@ const routes: Routes = [
   {
     path: 'live-stream',
     loadChildren: () => import('./views/live-stream/live-stream.module').then( m => m.LiveStreamPageModule)
-  },
-  {
-    path: 'note-details',
-    loadChildren: () => import('./views/note-details/note-details.module').then( m => m.NoteDetailsPageModule)
   },
   {
     path: 'podcast',

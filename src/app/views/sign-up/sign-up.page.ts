@@ -18,23 +18,17 @@ export class SignUpPage implements OnInit {
   constructor(private navCtrl: NavController, private api: ApiService, private rout: Router) { }
 
   ngOnInit() {
+    this.init();
   } 
   
   signUp() {
-    this.api.post('register', this.log).subscribe((data)=> {
-      console.log(data)
-      if(data.access_token) {
-        localStorage.setItem('HHC', JSON.stringify(data.access_token));
-        this.rout.navigate(['./home']);
-      }
+    this.api.post("auth/register", this.log).subscribe((res) => {
+      console.log(res);
+      this.rout.navigate(["./sign-in"]);
     });
   }
 
- signin() {
-    this.navCtrl.navigateRoot(['./sign-in']);
-  } 
-
   init() {
-    this.log = { fullname: '', mobile:'', email: '', departmentid: '', password: '', }
+    this.log = { name: '', email: '', password: '', password_confirmation: '' }
   }
 }

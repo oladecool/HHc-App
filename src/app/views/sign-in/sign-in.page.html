@@ -7,53 +7,69 @@
 -->
 
 <ion-content fullscreen class="bg_img">
-    <div class="logo ion-text-center">
-        <h1 class="ion-text-center">HolyHill<span>Chapel</span></h1>
-    </div>
-    <h2 class="ion-text-center ion-text-uppercase"><strong>{{'sign_in' | translate}}</strong> {{'now' | translate}}</h2>
+  <div class="logo ion-text-center">
+    <h1 class="ion-text-center">HolyHill<span>Chapel</span></h1>
+  </div>
+  <h2 class="ion-text-center ion-text-uppercase">
+    <strong>{{'sign_in' | translate}}</strong> {{'now' | translate}}
+  </h2>
 
-    <div class="form">
-        <ion-list lines="none">
-            <ion-item lines="none">
-                <div class="item_inner d-flex">
-                    <ion-icon class="zmdi zmdi-email ion-text-start"></ion-icon>
-                    <ion-input mode="md" type="email" placeholder="{{'e_mail' | translate}}"></ion-input>
-                </div>
-            </ion-item>
-
-            <ion-item lines="none">
-                <div class="item_inner d-flex">
-                    <ion-icon class="zmdi zmdi-lock ion-text-start"></ion-icon>
-                    <ion-input mode="md" type="password" placeholder="{{'password' | translate}}"></ion-input>
-                </div>
-            </ion-item>
-        </ion-list>
-        <ion-button size="large" expand="full" class="btn" (click)="home()">{{'sign_in' | translate}}</ion-button>
-
-        <div class="forgot-register">
-            <p class="d-flex">
-                <span (click)="password()">{{'forgot' | translate}}</span>
-                <span (click)="signup()" class="end"> {{'register' | translate}}</span>
-            </p>
+  <form method="POST" #loginForm="ngForm" (ngSubmit)="signIn()" class="form">
+    <ion-list lines="none">
+      <ion-item lines="none">
+        <div class="item_inner d-flex">
+          <ion-icon class="zmdi zmdi-email ion-text-start"></ion-icon>
+          <ion-input
+            mode="md"
+            type="email"
+            name="email"
+            [(ngModel)]="log.email"
+            placeholder="{{'e_mail' | translate}}"
+            required
+          ></ion-input>
         </div>
+      </ion-item>
 
+      <ion-item lines="none">
+        <div class="item_inner d-flex">
+          <ion-icon class="zmdi zmdi-lock ion-text-start"></ion-icon>
+          <ion-input
+            mode="md"
+            type="password"
+            name="password"
+            [(ngModel)]="log.password"
+            placeholder="{{'password' | translate}}"
+            required
+          ></ion-input>
+        </div>
+      </ion-item>
+    </ion-list>
+    <ion-button size="large" expand="full" class="btn" type="submit"  [disabled]="loginForm.invalid"
+      >{{'sign_in' | translate}}</ion-button
+    >
 
-        <div class="socsocial_media">
-            <p class="ion-text-center">{{'or_continue_with' | translate}}</p>
-            <div class="icon_box">
-                <div class="icon" (click)="home()">
-                    <img src="assets/imgs/ic_facebook.png">
-                </div>
-<!--
+    <div class="forgot-register">
+      <p class="d-flex">
+        <span (click)="password()">{{'forgot' | translate}}</span>
+        <span (click)="signup()" class="end"> {{'register' | translate}}</span>
+      </p>
+    </div>
+
+    <div class="socsocial_media">
+      <p class="ion-text-center">{{'or_continue_with' | translate}}</p>
+      <div class="icon_box">
+        <div class="icon" (click)="home()">
+          <img src="assets/imgs/ic_facebook.png" />
+        </div>
+        <!--
                 <div class="icon" (click)="home()">
                     <img src="assets/imgs/ic_twitter.png">
                 </div>
 -->
-                <div class="icon" (click)="home()">
-                    <img src="assets/imgs/ic_g.png">
-                </div>
-            </div>
+        <div class="icon" (click)="home()">
+          <img src="assets/imgs/ic_g.png" />
         </div>
+      </div>
     </div>
-
+  </form>
 </ion-content>

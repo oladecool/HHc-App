@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ApiService } from '../../services/api.service';
 
-
+// interface book{
+//   title:string,
+// }
 interface Books {
   data: Array<[]>;
 }
@@ -33,7 +35,7 @@ export class BooksPage implements OnInit {
   }
 
   bookinfo(book) {
-    this.route.navigate([book.id]);
+    this.route.navigate(['/books',book.id]);
   }  
 
   // init() {

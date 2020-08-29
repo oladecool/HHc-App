@@ -8,17 +8,17 @@
 </ion-header>
 
 <ion-content fullscreen class="bg_img">
-  <div class="details" *ngFor="let b of filtered, let i=index">
+  <div class="details">
     <div class="book">
       <div class="book_img center_img">
-        <img src="assets/imgs/book2.png" class="crop_img" />
+        <img [src]="book.cover" class="crop_img" />
       </div>
-      <p class="ion-text-center">{{b.title}}</p>
+      <p class="ion-text-center">{{book.title}}</p>
     </div>
 
     <div class="description">
       <!-- <h2>Meem is for Mercy</h2> -->
-      <p>{{b.description}}</p>
+      <p>{{book.description}}</p>
     </div>
   </div>
 </ion-content>

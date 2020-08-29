@@ -3,7 +3,9 @@ import { ApiService } from './../../../services/api.service';
 
 import { ActivatedRoute, Router } from '@angular/router';
 
-import { Books } from '../../interface/books';
+interface Books {
+  data: Array<[]>;
+}
 
 @Component({
   selector: 'app-books-info',
@@ -13,29 +15,26 @@ import { Books } from '../../interface/books';
 export class BooksInfoPage implements OnInit {
 
   books: any[] = [];
-  filtered: any[] = [];
-  book: any;
+  book: any = { title: '', description: '', cover: '', price: '' };
 
-  constructor(private api: ApiService, private router: Router, private rout: ActivatedRoute) { }
+  constructor(private api: ApiService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.init();
-    if(this.rout.snapshot.paramMap.has('id')){
-      this.getBooks(this.rout.snapshot.paramMap.get('id'));
-    }
+    const id = this.route.snapshot.paramMap.get('id');
+    // this.getBooks(id);
   }
 
   getBooks(id){
-    this.api.get('books/'+id).subscribe((data: any) => {
+    this.api.get('books/'+id).subscribe((data: any[]) => {
       console.log(data);
       this.book = data;
     })  
   }
 
-  init() {
-    this.book = { 
-      title: '', description: '', cover: '', price: '' 
-    };
-  }
+  // init() {
+  //   this.book = { 
+  //     title: '', description: '', cover: '', price: '' 
+  //   };
+  // }
 
 }

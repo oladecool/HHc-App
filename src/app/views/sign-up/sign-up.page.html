@@ -1,45 +1,78 @@
 <ion-header>
-    <ion-toolbar>
-        <ion-buttons slot="start">
-            <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
-        </ion-buttons>
-        <ion-title></ion-title>
-    </ion-toolbar>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+    </ion-buttons>
+    <ion-title></ion-title>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content fullscreen class="bg_img">
-    <div class="logo ion-text-center">
-        <!-- <h1 class="ion-text-center">HolyHill<span>Church</span></h1> -->
-    </div>
-    <h2 class="ion-text-center ion-text-uppercase"><strong>{{'register' | translate}}</strong> {{'now' | translate}}</h2>
+  <div class="logo ion-text-center">
+    <!-- <h1 class="ion-text-center">HolyHill<span>Church</span></h1> -->
+  </div>
+  <h2 class="ion-text-center ion-text-uppercase">
+    <strong>{{'register' | translate}}</strong> {{'now' | translate}}
+  </h2>
 
-    <div class="form" method="POST" #signUpForm="ngForm" (ngSubmit)="signUp()">
-        <ion-list lines="none">
-            <ion-item lines="none">
-                <div class="item_inner d-flex">
-                    <ion-icon class="zmdi zmdi-account ion-text-start"></ion-icon>
-                    <ion-input mode="md" type="name" placeholder="{{'name' | translate}}"></ion-input>
-                </div>
-            </ion-item>
-            <ion-item lines="none">
-                <div class="item_inner d-flex">
-                    <ion-icon class="zmdi zmdi-email ion-text-start"></ion-icon>
-                    <ion-input mode="md" type="email" placeholder="{{'e_mail' | translate}}"></ion-input>
-                </div>
-            </ion-item>
-            <ion-item lines="none">
-                <div class="item_inner d-flex">
-                    <ion-icon class="zmdi zmdi-lock ion-text-start"></ion-icon>
-                    <ion-input mode="md" type="password" placeholder="{{'password' | translate}}"></ion-input>
-                </div>
-            </ion-item>
-            <ion-item lines="none">
-                <div class="item_inner d-flex">
-                    <ion-icon class="zmdi zmdi-lock ion-text-start"></ion-icon>
-                    <ion-input mode="md" type="password" placeholder="{{'confirm_password' | translate}}"></ion-input>
-                </div>
-            </ion-item>
-        </ion-list>
-        <ion-button size="large" expand="full" class="btn" (click)="home()">{{'sign_up' | translate}}</ion-button>
-    </div>
+  <form class="form" method="POST" #signUpForm="ngForm" (ngSubmit)="signUp()">
+    <ion-list lines="none">
+      <ion-item lines="none">
+        <div class="item_inner d-flex">
+          <ion-icon class="zmdi zmdi-account ion-text-start"></ion-icon>
+          <ion-input
+            mode="md"
+            type="name"
+            name="name"
+            pattern="^[a-zA-Z]+\s[a-zA-Z\s]+$"
+            [(ngModel)]="log.name"
+            placeholder="{{'name' | translate}}"
+            required
+          ></ion-input>
+        </div>
+      </ion-item>
+      <ion-item lines="none">
+        <div class="item_inner d-flex">
+          <ion-icon class="zmdi zmdi-email ion-text-start"></ion-icon>
+          <ion-input
+            mode="md"
+            type="email"
+            name="email"
+            [(ngModel)]="log.email"
+            placeholder="{{'e_mail' | translate}}"
+            required
+          ></ion-input>
+        </div>
+      </ion-item>
+      <ion-item lines="none">
+        <div class="item_inner d-flex">
+          <ion-icon class="zmdi zmdi-lock ion-text-start"></ion-icon>
+          <ion-input
+            mode="md"
+            type="password"
+            name="password"
+            [(ngModel)]="log.password"
+            placeholder="{{'password' | translate}}"
+            required
+          ></ion-input>
+        </div>
+      </ion-item>
+      <ion-item lines="none">
+        <div class="item_inner d-flex">
+          <ion-icon class="zmdi zmdi-lock ion-text-start"></ion-icon>
+          <ion-input
+            mode="md"
+            type="password_confirmation"
+            name="password_confirmation"
+            placeholder="{{'confirm_password' | translate}}"
+            [(ngModel)]="log.password_confirmation"
+            required
+          ></ion-input>
+        </div>
+      </ion-item>
+    </ion-list>
+    <ion-button size="large" expand="full" class="btn" type="submit"
+    [disabled]="signUpForm.invalid">{{'sign_up' | translate}}</ion-button
+    >
+  </form>
 </ion-content>

@@ -20,6 +20,7 @@ import { NotificationService } from './services/notification.service';
 import { ErrorsService } from './services/errors.service';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from 'src/environments/environment';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -32,10 +33,11 @@ export function HttpLoaderFactory(http: HttpClient) {
 }
 
 @NgModule({
-  declarations: [AppComponent,],
+  declarations: [AppComponent],
   entryComponents: [],
    imports: [
-	  BrowserModule, 
+    BrowserModule, 
+    FormsModule,
 	  IonicModule.forRoot(), 
       // PaymentPageModule,   
       AppRoutingModule,
