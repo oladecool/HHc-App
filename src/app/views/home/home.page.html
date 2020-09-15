@@ -79,13 +79,13 @@
                 </div>
             </ion-col>
             <ion-col size="4">
-                <div class="menu-item">
+                <div class="menu-item" (click)="share()">
                     <img src="assets/imgs/ic_share.png">
                     <p>{{'share_app' | translate}}</p>
                 </div>
             </ion-col>
             <ion-col size="4">
-                <div class="menu-item">
+                <div class="menu-item" (click)="website()">
                     <img src="assets/imgs/ic_web.png">
                     <p>{{'website' | translate}}</p>
                 </div>
@@ -102,10 +102,10 @@
                     <p>{{'Testimony' | translate}}</p>
                 </div>
             </ion-col>
-            <ion-col size="4" (click)="testimonies()">
+            <ion-col size="4" (click)="donate()">
                 <div class="menu-item">
                     <img src="assets/imgs/ic_chat.png">
-                    <p>{{'Testimony' | translate}}</p>
+                    <p>{{'Donate' | translate}}</p>
                 </div>
             </ion-col>
         </ion-row>

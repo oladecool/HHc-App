@@ -2,12 +2,13 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
+import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
-import { TranslateLoader, TranslateModule, TranslatePipe } from '@ngx-translate/core';
+import { TranslateLoader, TranslateService, TranslateModule, TranslatePipe } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
@@ -21,7 +22,10 @@ import { ErrorsService } from './services/errors.service';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from 'src/environments/environment';
 import { FormsModule } from '@angular/forms';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
+import { ThemeableBrowser } from '@ionic-native/themeable-browser';
 
+import { OneSignal } from '@ionic-native/onesignal';
 
 
 export function tokenGetter() {
@@ -45,11 +49,11 @@ export function HttpLoaderFactory(http: HttpClient) {
       TranslateModule,      
       TranslateModule.forRoot({
         loader: {
-        provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
-        deps: [HttpClient]
-      }
-    }),
+          provide: TranslateLoader,
+          useFactory: HttpLoaderFactory,
+          deps: [HttpClient]
+        }
+      }),
     JwtModule.forRoot({
       config: {
         tokenGetter,
@@ -60,6 +64,9 @@ export function HttpLoaderFactory(http: HttpClient) {
   providers: [
     StatusBar,
     SplashScreen,
+    OneSignal,
+    SocialSharing,
+    InAppBrowser,
     ApiService, 
     NotificationService,
     ErrorsService,

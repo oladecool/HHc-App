@@ -3,6 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { Observable, Subject } from 'rxjs';
+import { SocialSharing } from "@ionic-native/social-sharing/ngx";
+
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +14,7 @@ export class ApiService {
   private isLoading = new Subject<boolean>();
   public Loading = this.isLoading.asObservable();
 
-  constructor(private http: HttpClient, public jwtHelper: JwtHelperService ) { }
+  constructor(private http: HttpClient,public jwtHelper: JwtHelperService ) { }
 
   show() {
     this.isLoading.next(true);
@@ -24,7 +26,18 @@ export class ApiService {
     // this.Loading = false;
   }
 
+  // social() {
+  //   let options = {
+  //     message: "Holy HillChapel", // not supported on some apps (Facebook, Instagram)
+  //     url: "http://holyhillchapelag.com/",
+  //   };
+  //   this.socialSharing.shareWithOptions(options);
+  // }
+
   user() {
+    let token = localStorage.getItem('HHC');
+    if (!token) return null;
+
     return this.jwtHelper.decodeToken(this.jwtHelper.tokenGetter());
   }
 
@@ -46,6 +59,9 @@ export class ApiService {
   delete(rout): Observable<any> {
     this.show();
     return this.http.delete(this.api + rout);
+  }
+
+  isLoggedIn() {
   }
 
 }

@@ -3,9 +3,7 @@ import { ApiService } from './../../../services/api.service';
 
 import { ActivatedRoute, Router } from '@angular/router';
 
-interface Books {
-  data: Array<[]>;
-}
+
 
 @Component({
   selector: 'app-books-info',
@@ -14,14 +12,14 @@ interface Books {
 })
 export class BooksInfoPage implements OnInit {
 
-  books: any[] = [];
+  public books: any[] = [];
   book: any = { title: '', description: '', cover: '', price: '' };
 
   constructor(private api: ApiService, private route: ActivatedRoute) { }
 
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id');
-    // this.getBooks(id);
+    this.getBooks(id);
   }
 
   getBooks(id){

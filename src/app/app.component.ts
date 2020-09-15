@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { NavController } from '@ionic/angular';
+import { NavController, AlertController } from '@ionic/angular';
 
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
@@ -8,6 +8,9 @@ import { TranslateService } from '@ngx-translate/core';
 import { APP_CONFIG, AppConfig } from './app.config';
 import { MyEvent } from 'services/myevent.services';
 import { Constants } from 'models/contants.models';
+import { ApiService } from './services/api.service';
+import { OneSignal } from '@ionic-native/onesignal/ngx';
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -21,11 +24,6 @@ export class AppComponent implements OnInit {
       title: 'home',
       url: '/home',
       image: 'assets/imgs/ic_home.png'
-    },
-    {
-      title: 'bible',
-      url: '/bible',
-      image: 'assets/imgs/ic_bible.png'
     },
     {
       title: 'books',
@@ -46,11 +44,6 @@ export class AppComponent implements OnInit {
       title: 'video',
       url: '/movies',
       image: 'assets/imgs/ic_gallery.png'
-    },
-    {
-      title: 'fathers',
-      url: '/chats',
-      image: 'assets/imgs/ic_father.png'
     },
     {
       title: 'prayers',
@@ -84,7 +77,7 @@ export class AppComponent implements OnInit {
     },
     {
       title: 'logout',
-      url: '/sign-in',
+      // url: '/sign-in',
       image: 'assets/imgs/ic_logout.png'
     },
   ]; 
@@ -94,6 +87,9 @@ export class AppComponent implements OnInit {
     private platform: Platform, private navCtrl: NavController,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
+    private api: ApiService,
+    private oneSignal: OneSignal,
+    private alertCtrl: AlertController,
     private translate: TranslateService, private myEvent: MyEvent) {
     this.initializeApp();
     this.myEvent.getLanguageObservable().subscribe(value => {
@@ -107,11 +103,52 @@ export class AppComponent implements OnInit {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
 
+      if(this.platform.is('cordova')) {
+        this.setupPush();
+      }
+
       let defaultLang = window.localStorage.getItem(Constants.KEY_DEFAULT_LANGUAGE);
       this.globalize(defaultLang);
     });
   }
 
+  setupPush() {
+    this.oneSignal.startInit('e08bfde0-b650-4c84-8034-3ba003411a8f', '32560390500');
+
+    this.oneSignal.inFocusDisplaying(this.oneSignal.OSInFocusDisplayOption.None)
+
+    this.oneSignal.handleNotificationReceived().subscribe(data => {
+      let msg = data.payload.body;
+      let title = data.payload.title;
+      let additionalData = data.payload.additionalData;
+      this.showAlert(title, msg, additionalData.task);
+    })
+
+    this.oneSignal.handleNotificationOpened().subscribe(data => {
+      let additionalData = data.notification.payload.additionalData;
+
+      this.showAlert('Notification opened', 'You already read this before', additionalData.task);
+    });
+
+    this.oneSignal.endInit();
+  }
+  
+  async showAlert(title, msg, task) {
+    const alert = await this.alertCtrl.create({
+      header: title,
+      subHeader: msg,
+      buttons: [
+        {
+          text: `Action: ${task}`,
+          handler: () => {
+            // E.g: Navigate to a specific screen
+          }
+        }
+      ]
+    })
+    alert.present();
+  }
+  
   globalize(languagePriority) {
     this.translate.setDefaultLang("en");
     let defaultLangCode = this.config.availableLanguages[0].code;
@@ -138,9 +175,14 @@ export class AppComponent implements OnInit {
       this.selectedIndex = this.appPages.findIndex(page => page.title.toLowerCase() === path.toLowerCase());
     }
   }
-  buyAppAction() {
-    window.open("https://bit.ly/cc2_TheChurch", '_system', 'location=no');
-  }
+
+  // buyAppAction() {
+  //   window.open("https://bit.ly/cc2_TheChurch", '_system', 'location=no');
+  // }
+
+  // logout() {
+  //   localStorage.removeItem('token')
+  // }
 
  profile() {
     this.navCtrl.navigateRoot(['./my-profile']);

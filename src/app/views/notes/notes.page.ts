@@ -3,9 +3,7 @@ import { AlertController, NavController } from "@ionic/angular";
 import { ApiService } from 'src/app/services/api.service';
 
 interface Notes {
-  id: string;
-  title: string;
-  content: string;
+  data: Array<[]>;
 }
 @Component({
   selector: "app-notes",
@@ -50,7 +48,7 @@ export class NotesPage implements OnInit {
   }
 
   createNote(title): void {
-    this.api.post('note', this.note,).subscribe((data: any[]) => {
+    this.api.post('notes', this.note).subscribe((data: Notes[]) => {
       console.log(data)
       this.notes = data;
     });

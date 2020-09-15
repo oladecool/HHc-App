@@ -117,6 +117,10 @@ const routes: Routes = [
     path: 'podcast',
     loadChildren: () => import('./views/podcast/podcast.module').then( m => m.PodcastPageModule)
   },
+  {
+    path: 'donate',
+    loadChildren: () => import('./views/donate/donate.module').then( m => m.DonatePageModule)
+  },
   
 ];
 
