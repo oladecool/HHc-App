@@ -68,6 +68,9 @@ export class HomePage implements OnInit {
   website() {
     this.iab.create('http://holyhillchapelag.com/','_self', 'location=yes');
   }
+  payment() {
+    this.iab.create('http://paystack.com/pay/holyhill/','_self', 'location=yes');
+  }
 
   share() {
     // this.api.social();
