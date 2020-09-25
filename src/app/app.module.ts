@@ -24,10 +24,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from 'src/environments/environment';
 import { FormsModule } from '@angular/forms';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
-<<<<<<< HEAD
 import { ThemeableBrowser } from '@ionic-native/themeable-browser/ngx';
-=======
->>>>>>> 3bdd1e1049ae9b099bff4913c9719ee91e739930
 
 import { OneSignal } from '@ionic-native/onesignal/ngx';
 
