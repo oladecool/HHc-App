@@ -23,7 +23,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from 'src/environments/environment';
 import { FormsModule } from '@angular/forms';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
-import { ThemeableBrowser } from '@ionic-native/themeable-browser';
+import { ThemeableBrowser } from '@ionic-native/themeable-browser/ngx';
 
 import { OneSignal } from '@ionic-native/onesignal';
 
@@ -63,6 +63,7 @@ export function HttpLoaderFactory(http: HttpClient) {
   ],
   providers: [
     StatusBar,
+    ThemeableBrowser,
     SplashScreen,
     OneSignal,
     SocialSharing,

@@ -141,7 +141,6 @@ export class AppComponent implements OnInit {
         {
           text: `Action: ${task}`,
           handler: () => {
-            // E.g: Navigate to a specific screen
           }
         }
       ]
