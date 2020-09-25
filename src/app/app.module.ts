@@ -1,3 +1,4 @@
+import { ThemeableBrowser } from '@ionic-native/themeable-browser/ngx';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -23,9 +24,12 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from 'src/environments/environment';
 import { FormsModule } from '@angular/forms';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
+<<<<<<< HEAD
 import { ThemeableBrowser } from '@ionic-native/themeable-browser/ngx';
+=======
+>>>>>>> 3bdd1e1049ae9b099bff4913c9719ee91e739930
 
-import { OneSignal } from '@ionic-native/onesignal';
+import { OneSignal } from '@ionic-native/onesignal/ngx';
 
 
 export function tokenGetter() {
@@ -67,6 +71,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     SplashScreen,
     OneSignal,
     SocialSharing,
+    ThemeableBrowser,
     InAppBrowser,
     ApiService, 
     NotificationService,
