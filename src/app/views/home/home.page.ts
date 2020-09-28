@@ -3,6 +3,7 @@ import { Component, OnInit } from "@angular/core";
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 import { ApiService } from 'src/app/services/api.service';
+import { ThemeableBrowserOptions, ThemeableBrowserObject, ThemeableBrowser } from '@ionic-native/themeable-browser/ngx';
 
 
 @Component({
@@ -11,15 +12,16 @@ import { ApiService } from 'src/app/services/api.service';
   styleUrls: ["./home.page.scss"],
 })
 export class HomePage implements OnInit {
-
   constructor(
-    private route: Router, 
+    private route: Router,
     private iab: InAppBrowser,
     private api: ApiService,
-     ) {}
+    private socialSharing: SocialSharing,
+    private themeableBrowser: ThemeableBrowser
+  ) {}
 
   ngOnInit() {}
-  
+
   select_language() {
     this.route.navigate(["./select-language"]);
   }
@@ -66,14 +68,62 @@ export class HomePage implements OnInit {
     this.route.navigate(["./donate"]);
   }
   website() {
-    this.iab.create('http://holyhillchapelag.com/','_self', 'location=yes');
+    this.iab.create("http://holyhillchapelag.com/", "_self", "location=yes");
   }
-  payment() {
-    this.iab.create('http://paystack.com/pay/holyhill/','_self', 'location=yes');
-  }
+  // payment() {
+  //   this.iab.create(
+  //     "http://paystack.com/pay/holyhill/",
+  //     "_self",
+  //     "location=yes"
+  //   );
+  // }
 
   share() {
     // this.api.social();
+    let options = {
+      message: "share this", // not supported on some apps (Facebook, Instagram)
+      url: "http://holyhillchapelag.com/",
+    };
+    this.socialSharing.shareWithOptions(options);
   }
 
+  payment() {
+    // https://ionicframework.com/docs/native/themeable-browser/
+    const options: ThemeableBrowserOptions = {
+      toolbar: {
+        height: 44,
+        color: "#3573bbff",
+      },
+      title: {
+        color: "#ffffffff",
+        showPageTitle: true,
+        staticText: "Academy Browser",
+      },
+      backButton: {
+        wwwImage: "assets/imgs/backward.png",
+        align: "left",
+        event: "backPressed",
+      },
+      forwardButton: {
+        wwwImage: "assets/img/forward.png",
+        align: "left",
+        event: "forwardPressed",
+      },
+      closeButton: {
+        wwwImage: "assets/img/close.png",
+        align: "left",
+        event: "closePressed",
+      },
+    };
+
+    const browser: ThemeableBrowserObject = this.themeableBrowser.create(
+      "http://paystack.com/pay/holyhill/",
+      "_blank",
+      options
+    );
+
+    browser.on("closePressed").subscribe((data) => {
+      browser.close();
+    });
+  }
 }
