@@ -26,6 +26,10 @@ export class ApiService {
     // this.Loading = false;
   }
 
+  getBooks() {
+    return this.http.get('/assets/books.json');
+  }
+
   // social() {
   //   let options = {
   //     message: "Holy HillChapel", // not supported on some apps (Facebook, Instagram)

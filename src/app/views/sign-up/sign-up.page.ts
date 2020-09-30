@@ -22,7 +22,7 @@ export class SignUpPage implements OnInit {
   } 
   
   signUp() {
-    this.api.post("auth/register", this.log).subscribe((res) => {
+    this.api.post("register", this.log).subscribe((res) => {
       console.log(res);
       this.rout.navigate(["./sign-in"]);
     });

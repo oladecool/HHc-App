@@ -12,22 +12,34 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class BooksInfoPage implements OnInit {
 
-  public books: any[] = [];
+  public books: string;
   book: any = { title: '', description: '', cover: '', price: '' };
 
   constructor(private api: ApiService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    const id = this.route.snapshot.paramMap.get('id');
-    this.getBooks(id);
+    // const id = +this.route.snapshot.paramMap.get('id');
+    // console.log(id);
+    // this.books = this.route.snapshot.paramMap.get('id');
+
+    // this.getBooks(id);
+    // this.Books(id);
   }
 
-  getBooks(id){
-    this.api.get('books/'+id).subscribe((data: any[]) => {
-      console.log(data);
-      this.book = data;
-    })  
-  }
+  // Books(id){
+  //   this.api.getBooks(id).subscribe((data: any[]) => {
+  //     console.log(data)
+  //     this.books = data;
+  //   })
+  // }
+
+  // getBooks(id){
+  //   this.api.get('books/'+id).subscribe((data: any[]) => {
+  //     console.log(data);
+  //     this.book = data;
+  //   })  
+  // }
+
 
   // init() {
   //   this.book = { 

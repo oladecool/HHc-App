@@ -30,36 +30,36 @@ export class AppComponent implements OnInit {
       url: '/books',
       image: 'assets/imgs/ic_book.png' 
     },
-    {
-      title: 'chat_father',
-      url: '/chats',
-      image: 'assets/imgs/ic_chat.png'
-    }, 
-     {
-      title: 'find_church',
-      url: '/find-church',
-      image: 'assets/imgs/ic_church.png'
-    },
+    // {
+    //   title: 'chat_father',
+    //   url: '/chats',
+    //   image: 'assets/imgs/ic_chat.png'
+    // }, 
+    //  {
+    //   title: 'find_church',
+    //   url: '/find-church',
+    //   image: 'assets/imgs/ic_church.png'
+    // },
     {
       title: 'video',
       url: '/movies',
       image: 'assets/imgs/ic_gallery.png'
     },
-    {
-      title: 'prayers',
-      url: '/prayers',
-      image: 'assets/imgs/ic_prayer.png'
-    }, 
-     {
-      title: 'events',
-      url: '/events',
-      image: 'assets/imgs/ic_events.png'
-    },
-    {
-      title: 'prayer_times',
-      url: '/prayer-time',
-      image: 'assets/imgs/ic_prayer_time.png'
-    },  
+    // {
+    //   title: 'prayers',
+    //   url: '/prayers',
+    //   image: 'assets/imgs/ic_prayer.png'
+    // }, 
+    //  {
+    //   title: 'events',
+    //   url: '/events',
+    //   image: 'assets/imgs/ic_events.png'
+    // },
+    // {
+    //   title: 'prayer_times',
+    //   url: '/prayer-time',
+    //   image: 'assets/imgs/ic_prayer_time.png'
+    // },  
      {
       title: 'share_app',
 //      url: '/prayer-time',
@@ -67,14 +67,14 @@ export class AppComponent implements OnInit {
     },  
      {
       title: 'website',
-//      url: '/prayer-time',
+      url: '/website',
       image: 'assets/imgs/ic_web.png'
     },
-    {
-      title: 'feedback',
-      url: '/feedback',
-      image: 'assets/imgs/ic_feedback.png'
-    },
+    // {
+    //   title: 'feedback',
+    //   url: '/feedback',
+    //   image: 'assets/imgs/ic_feedback.png'
+    // },
     {
       title: 'logout',
       // url: '/sign-in',

@@ -24,7 +24,7 @@ export class SignInPage implements OnInit {
   }
 
   signIn() {
-    this.api.post("auth/login", this.log).subscribe((res) => {
+    this.api.post("login", this.log).subscribe((res) => {
       if(res.token) {
         localStorage.setItem('HHC', JSON.stringify(res.token));
         this.route.navigate(["./home"]);
