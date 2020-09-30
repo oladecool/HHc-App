@@ -10,6 +10,9 @@ import { MyEvent } from 'services/myevent.services';
 import { Constants } from 'models/contants.models';
 import { ApiService } from './services/api.service';
 import { OneSignal } from '@ionic-native/onesignal/ngx';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
+
+import { InAppBrowserOptions } from '@ionic-native/in-app-browser';
 
 @Component({
   selector: 'app-root',
@@ -50,11 +53,6 @@ export class AppComponent implements OnInit {
     //   url: '/prayers',
     //   image: 'assets/imgs/ic_prayer.png'
     // }, 
-    //  {
-    //   title: 'events',
-    //   url: '/events',
-    //   image: 'assets/imgs/ic_events.png'
-    // },
     // {
     //   title: 'prayer_times',
     //   url: '/prayer-time',
@@ -65,16 +63,6 @@ export class AppComponent implements OnInit {
 //      url: '/prayer-time',
       image: 'assets/imgs/ic_share.png'
     },  
-     {
-      title: 'website',
-      url: '/website',
-      image: 'assets/imgs/ic_web.png'
-    },
-    // {
-    //   title: 'feedback',
-    //   url: '/feedback',
-    //   image: 'assets/imgs/ic_feedback.png'
-    // },
     {
       title: 'logout',
       // url: '/sign-in',
@@ -87,6 +75,7 @@ export class AppComponent implements OnInit {
     private platform: Platform, private navCtrl: NavController,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
+    private iab: InAppBrowser,
     private api: ApiService,
     private oneSignal: OneSignal,
     private alertCtrl: AlertController,
