@@ -3,8 +3,6 @@ import { ApiService } from './../../../services/api.service';
 
 import { ActivatedRoute, Router } from '@angular/router';
 
-
-
 @Component({
   selector: 'app-books-info',
   templateUrl: './books-info.page.html',
@@ -12,15 +10,15 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class BooksInfoPage implements OnInit {
 
-  public books: string;
-  book: any = { title: '', description: '', cover: '', price: '' };
+  // public book: Books;
+  // book: any = { title: '', description: '', cover: '', price: '' };
 
   constructor(private api: ApiService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    // const id = +this.route.snapshot.paramMap.get('id');
+    const id = this.route.snapshot.paramMap.get('id');
     // console.log(id);
-    // this.books = this.route.snapshot.paramMap.get('id');
+    // this.book = this.api.getBooks(id);
 
     // this.getBooks(id);
     // this.Books(id);

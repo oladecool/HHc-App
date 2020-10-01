@@ -37,7 +37,7 @@ export class BooksPage implements OnInit {
 
   Books(){
     this.api.getBooks().subscribe((data: any[]) => {
-      // console.log(data)
+      console.log(data)
       this.books = data;
     })
   }
