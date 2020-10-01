@@ -11,16 +11,17 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class BooksInfoPage implements OnInit {
 
   // public book: Books;
-  // book: any = { title: '', description: '', cover: '', price: '' };
+  book: any = { };
 
   constructor(private api: ApiService, private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.init();
     const id = this.route.snapshot.paramMap.get('id');
     // console.log(id);
     // this.book = this.api.getBooks(id);
 
-    // this.getBooks(id);
+    this.getBooks(id);
     // this.Books(id);
   }
 
@@ -31,18 +32,18 @@ export class BooksInfoPage implements OnInit {
   //   })
   // }
 
-  // getBooks(id){
-  //   this.api.get('books/'+id).subscribe((data: any[]) => {
-  //     console.log(data);
-  //     this.book = data;
-  //   })  
-  // }
+  getBooks(id){
+    this.api.get('books/'+id).subscribe((data: any[]) => {
+      console.log(data);
+      this.book = data;
+    })  
+  }
 
 
-  // init() {
-  //   this.book = { 
-  //     title: '', description: '', cover: '', price: '' 
-  //   };
-  // }
+  init() {
+    this.book = { 
+      title: '', description: '', cover: '', price: '' 
+    };
+  }
 
 }
