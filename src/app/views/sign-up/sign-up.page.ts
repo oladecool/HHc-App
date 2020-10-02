@@ -29,6 +29,6 @@ export class SignUpPage implements OnInit {
   }
 
   init() {
-    this.log = { name: '', email: '', password: '', password_confirmation: '', user_type: 'member' }
+    this.log = { name: '', email: '', password: '', password_confirmation: '' }
   }
 }

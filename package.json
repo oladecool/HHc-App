@@ -33,8 +33,6 @@
     "@ngx-translate/core": "^12.1.2",
     "@ngx-translate/http-loader": "^4.0.0",
     "cordova-browser": "^6.0.0",
-    "cordova-plugin-androidx": "^3.0.0",
-    "cordova-plugin-androidx-adapter": "^1.1.1",
     "rxjs": "~6.5.1",
     "sweetalert2": "^9.17.1",
     "tslib": "^1.10.0",
@@ -53,6 +51,7 @@
     "@types/node": "^12.11.1",
     "codelyzer": "^5.1.2",
     "cordova-android": "8.0.0",
+    "cordova-plugin-androidx": "^3.0.0",
     "cordova-plugin-device": "^2.0.2",
     "cordova-plugin-inappbrowser": "^4.0.0",
     "cordova-plugin-ionic-keyboard": "^2.2.0",
@@ -90,9 +89,7 @@
       "onesignal-cordova-plugin": {},
       "cordova-plugin-x-socialsharing": {},
       "cordova-plugin-inappbrowser": {},
-      "cordova-plugin-themeablebrowser": {},
-      "cordova-plugin-androidx": {},
-      "cordova-plugin-androidx-adapter": {}
+      "cordova-plugin-themeablebrowser": {}
     },
     "platforms": [
       "android"

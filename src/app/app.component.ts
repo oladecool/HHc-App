@@ -65,7 +65,7 @@ export class AppComponent implements OnInit {
     },  
     {
       title: 'logout',
-      // url: '/sign-in',
+      url: '/sign-in',
       image: 'assets/imgs/ic_logout.png'
     },
   ]; 
@@ -180,9 +180,10 @@ export class AppComponent implements OnInit {
   //   window.open("https://bit.ly/cc2_TheChurch", '_system', 'location=no');
   // }
 
-  // logout() {
-  //   localStorage.removeItem('token')
-  // }
+  logout() {
+    localStorage.removeItem('token')
+    this.api.get("/logout");
+  }
 
  profile() {
     this.navCtrl.navigateRoot(['./my-profile']);
