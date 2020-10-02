@@ -9,9 +9,15 @@
 </ion-header>
 
 <ion-content fullscreen class="bg_img">
-  <div class="logo ion-text-center">
-        <h1 class="ion-text-center;">Submit <br>Testimony</h1>
-    </div>
 
+  <ion-list>
+    <ion-item *ngFor="let pod of pods">
+      <ion-label>
+        Uploaded By
+        <p>{{ pod.uploader.name }}</p>
+      </ion-label>
+      <a color="primary" slot="end" href="http://office.holyhillchapelag.com/public/uploads/audios/{{ pod.title }}">Download</a>
+    </ion-item>
+  </ion-list>
  
 </ion-content>
