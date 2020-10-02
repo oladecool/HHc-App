@@ -54,6 +54,11 @@ export class ApiService {
     return this.http.get(this.api + 'notes');
   }
 
+  getPods() {
+    this.show();
+    return this.http.get(this.api + 'podcasts');
+  }
+
   get(route) {
     this.show();
     return this.http.get(this.api + route);
