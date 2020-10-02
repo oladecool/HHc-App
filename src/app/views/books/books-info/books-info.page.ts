@@ -33,10 +33,10 @@ export class BooksInfoPage implements OnInit {
   // }
 
   getBooks(id){
-    this.api.get('books/'+id).subscribe((data: any[]) => {
+    this.api.get('books/'+id).subscribe((data: any) => {
       console.log(data);
-      this.book = data;
-    })  
+      this.book = data.data;
+    });
   }
 
 
