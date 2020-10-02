@@ -1,65 +1,39 @@
 [
     { 
      "id": "1",
-     "title": "Welcome Holy Spirit",
-     "cover": "1597444841.jpeg",
-     "description": "Every believer can flow in the Holy Spirit., Every believer should flow in the Holy Spirit., God is looking for people just like you – not perfect,",
-     "price": "60.00"
+     "title": "Grace The Winning Factor",
+     "cover": "assets/imgs/glory.png",
+     "description": "In life, there are no great people but only graced people. Grace is what makes the difference between two people.ect,"
     },
     { 
      "id": "2",
-     "title": "Welcome Holy Spirit",
-     "cover": "1597444841.jpeg",
-     "description": "Every believer can flow in the Holy Spirit., Every believer should flow in the Holy Spirit., God is looking for people just like you – not perfect,",
-     "price": "60.00"
+     "title": "Chronicle of miracles, signs and wonders",
+     "cover": "assets/imgs/chron.jpeg",
+     "description": "God is a God of miracles, signs and wonders, so are his children"
     },
     { 
      "id": "3",
-     "title": "Welcome Holy Spirit",
-     "cover": "1597444841.jpeg",
-     "description": "Every believer can flow in the Holy Spirit., Every believer should flow in the Holy Spirit., God is looking for people just like you – not perfect,",
-     "price": "60.00"
+     "title": "How To Provoke Supernatural Favor",
+     "cover": "assets/imgs/favour.jpeg",
+     "description": "Favor changes the game of life,it turns losers into victors, it makes the nobody a somebody"
     },
     { 
      "id": "4",
-     "title": "Welcome Holy Spirit",
-     "cover": "1597444841.jpeg",
-     "description": "Every believer can flow in the Holy Spirit., Every believer should flow in the Holy Spirit., God is looking for people just like you – not perfect,",
-     "price": "60.00"
+     "title": "Serving your way to the top",
+     "cover": "assets/imgs/top.jpeg",
+     "description": "We are saved to serve,but many sit in churches not knowing the blessings there are missing"
     },
     { 
      "id": "5",
-     "title": "Welcome Holy Spirit",
-     "cover": "1597444841.jpeg",
-     "description": "Every believer can flow in the Holy Spirit., Every believer should flow in the Holy Spirit., God is looking for people just like you – not perfect,",
-     "price": "60.00"
+     "title": "Determination The Force Behind Achievements",
+     "cover": "assets/imgs/determine.jpeg",
+     "description": " to him that believeth, all things are possible, This what this book is about"
     },
     { 
      "id": "6",
-     "title": "Welcome Holy Spirit",
-     "cover": "1597444841.jpeg",
-     "description": "Every believer can flow in the Holy Spirit., Every believer should flow in the Holy Spirit., God is looking for people just like you – not perfect,",
-     "price": "60.00"
-    },
-    { 
-     "id": "7",
-     "title": "Welcome Holy Spirit",
-     "cover": "1597444841.jpeg",
-     "description": "Every believer can flow in the Holy Spirit., Every believer should flow in the Holy Spirit., God is looking for people just like you – not perfect,",
-     "price": "60.00"
-    },
-    { 
-     "id": "8",
-     "title": "Welcome Holy Spirit",
-     "cover": "1597444841.jpeg",
-     "description": "Every believer can flow in the Holy Spirit., Every believer should flow in the Holy Spirit., God is looking for people just like you – not perfect,",
-     "price": "60.00"
-    },
-    { 
-     "id": "9",
-     "title": "Welcome Holy Spirit",
-     "cover": "1597444841.jpeg",
-     "description": "Every believer can flow in the Holy Spirit., Every believer should flow in the Holy Spirit., God is looking for people just like you – not perfect,",
+     "title": "I refuse To be poor",
+     "cover": "assets/imgs/poor.jpeg",
+     "description": "God created man and put him in a gardern of abundance, wealth and glory but after the fall of Adam poverty",
      "price": "60.00"
     }
 ]
