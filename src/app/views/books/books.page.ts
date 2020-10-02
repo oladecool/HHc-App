@@ -23,24 +23,24 @@ export class BooksPage implements OnInit {
   constructor(private route: Router, private api: ApiService) { }
 
   ngOnInit() {
-    // this.getBooks();
-    this.Books();
+    this.getBooks();
+    // this.Books();
   }
 
-  // getBooks(){
-  //   this.api.get('books').subscribe((res: Books) => {
-  //     console.log(res.data);
-  //     this.books = res.data; 
-  //     this.filtered = res.data;
-  //   })  
+  getBooks(){
+    this.api.get('books').subscribe((res: Books) => {
+      console.log(res.data);
+      this.books = res.data; 
+      this.filtered = res.data;
+    })  
+  }
+
+  // Books(){
+  //   this.api.getBooks().subscribe((data: any[]) => {
+  //     console.log(data)
+  //     this.books = data;
+  //   })
   // }
-
-  Books(){
-    this.api.getBooks().subscribe((data: any[]) => {
-      console.log(data)
-      this.books = data;
-    })
-  }
 
   bookinfo(book) {
     this.route.navigate(['/books',book.id]);

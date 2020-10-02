@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  imgUrl: "http://94.237.48.92/api/public/",
-  apiUrl: "http://94.237.48.92/api/"
+  imgUrl: "http://office.holyhillchapelag.com/api/public/",
+  apiUrl: "http://office.holyhillchapelag.com/api/"
 };
 
 /*

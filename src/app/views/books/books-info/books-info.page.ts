@@ -39,20 +39,11 @@ export class BooksInfoPage implements OnInit {
     })  
   }
 
-<<<<<<< HEAD
-0
-  // init() {
-  //   this.book = { 
-  //     title: '', description: '', cover: '', price: '' 
-  //   };
-  // }
-=======
 
   init() {
     this.book = { 
       title: '', description: '', cover: '', price: '' 
     };
   }
->>>>>>> f5b0a75d28ccc07230839410e1b503680763453a
 
 }
