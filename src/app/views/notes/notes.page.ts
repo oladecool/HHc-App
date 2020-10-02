@@ -37,6 +37,7 @@ export class NotesPage implements OnInit {
           {
             text: "Save",
             handler: (data) => {
+              this.note.title = data.title;
               this.createNote(data.title);
             },
           },

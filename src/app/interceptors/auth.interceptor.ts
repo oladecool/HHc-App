@@ -19,7 +19,7 @@ export class AuthInterceptor implements HttpInterceptor {
         if (this.url === 'upload') {
             req = req.clone({
                 setHeaders: {
-                    'Access-Control-Allow-Origin': '*',
+                    // 'Access-Control-Allow-Origin': '*',
                     Authorization: `Bearer ${this.jwtHelper.tokenGetter()}`
                 }
             });
@@ -27,7 +27,7 @@ export class AuthInterceptor implements HttpInterceptor {
             req = req.clone({
                 setHeaders: {
                     'Content-Type': 'application/json',
-                    'Access-Control-Allow-Origin': '*',
+                    // 'Access-Control-Allow-Origin': '*',
                     Authorization: `Bearer ${this.jwtHelper.tokenGetter()}`
                     // Authorization: `Bearer ` + this.jwtHelper.tokenGetter()
                 }
