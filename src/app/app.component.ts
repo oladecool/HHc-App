@@ -70,6 +70,9 @@ export class AppComponent implements OnInit {
     },
   ]; 
 
+  name: any;
+  email: any;
+
   constructor(
     @Inject(APP_CONFIG) public config: AppConfig,
     private platform: Platform, private navCtrl: NavController,
@@ -98,6 +101,15 @@ export class AppComponent implements OnInit {
 
       let defaultLang = window.localStorage.getItem(Constants.KEY_DEFAULT_LANGUAGE);
       this.globalize(defaultLang);
+
+      if (localStorage.getItem('HHC')) {
+        this.api.getUser().subscribe((res:any) => {
+          this.name = res.user.name;
+          this.email = res.user.email;
+        }, err => {
+
+        })
+      }
     });
   }
 

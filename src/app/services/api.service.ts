@@ -44,6 +44,11 @@ export class ApiService {
     return this.jwtHelper.decodeToken(this.jwtHelper.tokenGetter());
   }
 
+  getUser() {
+    this.show();
+    return this.http.get(this.api + 'user');
+  }
+
   get(route) {
     this.show();
     return this.http.get(this.api + route);
