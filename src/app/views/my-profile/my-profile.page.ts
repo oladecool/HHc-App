@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../../services/api.service';
 
 @Component({
   selector: 'app-my-profile',
@@ -7,9 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyProfilePage implements OnInit {
 
-  constructor() { }
+  name: any;
+  email: any;
+
+  constructor(private api: ApiService) { }
 
   ngOnInit() {
+    this.getProfile();
+  }
+
+  getProfile() {
+    if (localStorage.getItem('HHC')) {
+      this.api.getUser().subscribe((res:any) => {
+        this.name = res.user.name;
+        this.email = res.user.email;
+      }, err => {
+
+      })
+    }
   }
 
 }
