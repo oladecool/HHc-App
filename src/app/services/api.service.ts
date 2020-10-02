@@ -5,7 +5,6 @@ import { JwtHelperService } from '@auth0/angular-jwt';
 import { Observable, Subject } from 'rxjs';
 import { SocialSharing } from "@ionic-native/social-sharing/ngx";
 
-
 @Injectable({
   providedIn: 'root'
 })
