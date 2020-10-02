@@ -11,12 +11,16 @@ import { NgForm } from '@angular/forms';
 })
 export class TestimoniesPage implements OnInit {
   @ViewChild('signUpForm', {static: true}) public signUpForm: NgForm;
-  test: any;
+  test = {
+    type: 'Testomony',
+    name: '',
+    story: '',
+    member_id: '',
+  };
 
   constructor(private navCtrl: NavController, private api: ApiService, private rout: Router) { }
 
   ngOnInit() {
-    this.init();
   } 
   
   Addtestimony() {
@@ -25,10 +29,4 @@ export class TestimoniesPage implements OnInit {
       this.rout.navigate(["./home"]);
     });
   }
-
-  init() {
-    this.test = { member_id: '', story: '', }
-  }
-
-
 }
