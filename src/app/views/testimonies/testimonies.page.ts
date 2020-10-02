@@ -20,7 +20,7 @@ export class TestimoniesPage implements OnInit {
   } 
   
   Addtestimony() {
-    this.api.post("testimonies/add", this.test).subscribe((res) => {
+    this.api.post("testimonies", this.test).subscribe((res) => {
       console.log(res);
       this.rout.navigate(["./home"]);
     });

@@ -65,17 +65,5 @@ export class NotesPage implements OnInit {
       this.notes.push(this.note);
     });
 
-
-    // Create a unique id that is one larger than the current largest id
-    // let id = Math.max(...this.notes.map(note => parseInt(note.id)), 0) + 1;
-
-    // this.notes.push({
-    //   id: id.toString(),
-    //   title: title,
-    //   content: ''
-    // });
-
-    // this.save();
-
   }
 }

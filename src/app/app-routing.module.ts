@@ -1,133 +1,184 @@
-import { NgModule } from '@angular/core';
-import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { NgModule } from "@angular/core";
+import { PreloadAllModules, RouterModule, Routes } from "@angular/router";
+import { AuthGuard } from './guard/auth.guard';
 
 const routes: Routes = [
-  { 
-    path: '',redirectTo: 'home', pathMatch: 'full'
+  {
+    path: "",
+    redirectTo: "home",
+    pathMatch: "full",
   },
   {
-    path: 'folder/:id',
-    loadChildren: () => import('./views/folder/folder.module').then( m => m.FolderPageModule)
+    path: "folder/:id",
+    loadChildren: () =>
+      import("./views/folder/folder.module").then((m) => m.FolderPageModule),
+      canActivate: [AuthGuard]
   },
   {
-    path: 'sign-in',
-    loadChildren: () => import('./views/sign-in/sign-in.module').then( m => m.SignInPageModule)
+    path: "sign-in",
+    loadChildren: () =>
+      import("./views/sign-in/sign-in.module").then((m) => m.SignInPageModule),
+
   },
   {
-    path: 'sign-up',
-    loadChildren: () => import('./views/sign-up/sign-up.module').then( m => m.SignUpPageModule)
+    path: "sign-up",
+    loadChildren: () =>
+      import("./views/sign-up/sign-up.module").then((m) => m.SignUpPageModule),
+      canActivate: [AuthGuard]
   },
   {
-    path: 'forgot-password',
-    loadChildren: () => import('./views/forgot-password/forgot-password.module').then( m => m.ForgotPasswordPageModule)
+    path: "forgot-password",
+    loadChildren: () =>
+      import("./views/forgot-password/forgot-password.module").then(
+        (m) => m.ForgotPasswordPageModule
+      ),
   },
   {
-    path: 'select-language',
-    loadChildren: () => import('./select-language/select-language.module').then( m => m.SelectLanguagePageModule)
+    path: "select-language",
+    loadChildren: () =>
+      import("./select-language/select-language.module").then(
+        (m) => m.SelectLanguagePageModule
+      ),
   },
   {
-    path: 'home',
-    loadChildren: () => import('./views/home/home.module').then( m => m.HomePageModule)
+    path: "home",
+    loadChildren: () =>
+      import("./views/home/home.module").then((m) => m.HomePageModule),
+      canActivate: [AuthGuard]
+
+  },
+
+  {
+    path: "chats",
+    loadChildren: () =>
+      import("./views/chats/chats.module").then((m) => m.ChatsPageModule),
   },
   {
-    path: 'bible',
-    loadChildren: () => import('./views/bible/bible.module').then( m => m.BiblePageModule)
+    path: "plan",
+    loadChildren: () =>
+      import("./views/plan/plan.module").then((m) => m.PlanPageModule),
   },
   {
-    path: 'read-bible',
-    loadChildren: () => import('./views/read-bible/read-bible.module').then( m => m.ReadBiblePageModule)
+    path: "payment",
+    loadChildren: () =>
+      import("./views/payment/payment.module").then((m) => m.PaymentPageModule),
   },
   {
-    path: 'chats',
-    loadChildren: () => import('./views/chats/chats.module').then( m => m.ChatsPageModule)
+    path: "chat-screen",
+    loadChildren: () =>
+      import("./views/chat-screen/chat-screen.module").then(
+        (m) => m.ChatScreenPageModule
+      ),
   },
   {
-    path: 'plan',
-    loadChildren: () => import('./views/plan/plan.module').then( m => m.PlanPageModule)
+    path: "books",
+    loadChildren: () =>
+      import("./views/books/books.module").then((m) => m.BooksPageModule),
+      canActivate: [AuthGuard]
+
   },
   {
-    path: 'father-profile',
-    loadChildren: () => import('./views/father-profile/father-profile.module').then( m => m.FatherProfilePageModule)
+    path: "find-church",
+    loadChildren: () =>
+      import("./views/find-church/find-church.module").then(
+        (m) => m.FindChurchPageModule
+      ),
   },
   {
-    path: 'payment',
-    loadChildren: () => import('./views/payment/payment.module').then( m => m.PaymentPageModule)
+    path: "events",
+    loadChildren: () =>
+      import("./views/events/events.module").then((m) => m.EventsPageModule),
+      canActivate: [AuthGuard]
+
   },
   {
-    path: 'chat-screen',
-    loadChildren: () => import('./views/chat-screen/chat-screen.module').then( m => m.ChatScreenPageModule)
+    path: "event-info",
+    loadChildren: () =>
+      import("./views/event-info/event-info.module").then(
+        (m) => m.EventInfoPageModule
+      ),
+      canActivate: [AuthGuard]
+
   },
   {
-    path: 'movies',
-    loadChildren: () => import('./views/movies/movies.module').then( m => m.MoviesPageModule)
+    path: "prayers",
+    loadChildren: () =>
+      import("./views/prayers/prayers.module").then((m) => m.PrayersPageModule),
+      canActivate: [AuthGuard]
+
   },
   {
-    path: 'books',
-    loadChildren: () => import('./views/books/books.module').then( m => m.BooksPageModule)
+    path: "read-prayer",
+    loadChildren: () =>
+      import("./views/read-prayer/read-prayer.module").then(
+        (m) => m.ReadPrayerPageModule
+      ),
+      canActivate: [AuthGuard]
   },
   {
-    path: 'find-church',
-    loadChildren: () => import('./views/find-church/find-church.module').then( m => m.FindChurchPageModule)
+    path: "prayer-time",
+    loadChildren: () =>
+      import("./views/prayer-time/prayer-time.module").then(
+        (m) => m.PrayerTimePageModule
+      ),
   },
   {
-    path: 'church-info',
-    loadChildren: () => import('./views/church-info/church-info.module').then( m => m.ChurchInfoPageModule)
+    path: "my-profile",
+    loadChildren: () =>
+      import("./views/my-profile/my-profile.module").then(
+        (m) => m.MyProfilePageModule
+      ),
+      canActivate: [AuthGuard]
   },
   {
-    path: 'events',
-    loadChildren: () => import('./views/events/events.module').then( m => m.EventsPageModule)
+    path: "feedback",
+    loadChildren: () =>
+      import("./views/feedback/feedback.module").then(
+        (m) => m.FeedbackPageModule
+      ),
+      canActivate: [AuthGuard]
   },
   {
-    path: 'event-info',
-    loadChildren: () => import('./views/event-info/event-info.module').then( m => m.EventInfoPageModule)
+    path: "testimonies",
+    loadChildren: () =>
+      import("./views/testimonies/testimonies.module").then(
+        (m) => m.TestimoniesPageModule
+      ),
+      canActivate: [AuthGuard]
   },
   {
-    path: 'prayers',
-    loadChildren: () => import('./views/prayers/prayers.module').then( m => m.PrayersPageModule)
+    path: "notes",
+    loadChildren: () =>
+      import("./views/notes/notes.module").then((m) => m.NotesPageModule),
+      canActivate: [AuthGuard]
   },
   {
-    path: 'read-prayer',
-    loadChildren: () => import('./views/read-prayer/read-prayer.module').then( m => m.ReadPrayerPageModule)
+    path: "live-stream",
+    loadChildren: () =>
+      import("./views/live-stream/live-stream.module").then(
+        (m) => m.LiveStreamPageModule
+      ),
+      canActivate: [AuthGuard]
+
   },
   {
-    path: 'prayer-time',
-    loadChildren: () => import('./views/prayer-time/prayer-time.module').then( m => m.PrayerTimePageModule)
+    path: "podcast",
+    loadChildren: () =>
+      import("./views/podcast/podcast.module").then((m) => m.PodcastPageModule),
+      canActivate: [AuthGuard]
   },
   {
-    path: 'my-profile',
-    loadChildren: () => import('./views/my-profile/my-profile.module').then( m => m.MyProfilePageModule)
+    path: "donate",
+    loadChildren: () =>
+      import("./views/donate/donate.module").then((m) => m.DonatePageModule),
+      canActivate: [AuthGuard]
   },
-  {
-    path: 'feedback',
-    loadChildren: () => import('./views/feedback/feedback.module').then( m => m.FeedbackPageModule)
-  },
-  {
-    path: 'testimonies',
-    loadChildren: () => import('./views/testimonies/testimonies.module').then( m => m.TestimoniesPageModule)
-  },
-  {
-    path: 'notes',
-    loadChildren: () => import('./views/notes/notes.module').then( m => m.NotesPageModule)
-  },
-  {
-    path: 'live-stream',
-    loadChildren: () => import('./views/live-stream/live-stream.module').then( m => m.LiveStreamPageModule)
-  },
-  {
-    path: 'podcast',
-    loadChildren: () => import('./views/podcast/podcast.module').then( m => m.PodcastPageModule)
-  },
-  {
-    path: 'donate',
-    loadChildren: () => import('./views/donate/donate.module').then( m => m.DonatePageModule)
-  },
-  
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }),
   ],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}
