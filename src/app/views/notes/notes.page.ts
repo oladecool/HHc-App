@@ -12,12 +12,14 @@ interface Notes {
 })
 export class NotesPage implements OnInit {
 
-  public notes: any[] = [];
+  public notes: any;
   note: any = { title: '', description: '', cover: '', price: '' };
 
   constructor(private alertCtrl: AlertController, private api: ApiService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.getNotes();
+  }
 
   addNote() {
     this.alertCtrl
@@ -37,7 +39,8 @@ export class NotesPage implements OnInit {
           {
             text: "Save",
             handler: (data) => {
-              this.createNote(data.title);
+              this.note.title = data.title;
+              this.createNote();
             },
           },
         ],
@@ -47,10 +50,19 @@ export class NotesPage implements OnInit {
       });
   }
 
-  createNote(title): void {
+  getNotes() {
+    this.api.getNotes()
+    .subscribe((res:any) => {
+      this.notes = res.data;
+    }, err => {
+
+    })
+  }
+
+  createNote(): void {
     this.api.post('notes', this.note).subscribe((data: Notes[]) => {
       console.log(data)
-      this.notes = data;
+      this.notes.push(this.note);
     });
 
 

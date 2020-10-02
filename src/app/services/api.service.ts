@@ -49,6 +49,11 @@ export class ApiService {
     return this.http.get(this.api + 'user');
   }
 
+  getNotes() {
+    this.show();
+    return this.http.get(this.api + 'notes');
+  }
+
   get(route) {
     this.show();
     return this.http.get(this.api + route);
