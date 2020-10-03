@@ -51,7 +51,7 @@ export class AuthInterceptor implements HttpInterceptor {
                 if (err.status === 401) {
                     this.notify.error('Login Session Expired Please Login Again');
                     localStorage.removeItem('HHC');
-                    return this.router.navigate(['/login']);
+                    return this.router.navigate(['/sign-in']);
                 }
             }
             const msg = err.error.message || err.message;

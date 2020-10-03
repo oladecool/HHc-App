@@ -23,6 +23,7 @@ export class AuthGuard implements CanActivate, CanLoad {
     // }
 
     if (this.api.user()) {
+      console.log(this.api.user())
       // logged in so return true
       return true;
     }
