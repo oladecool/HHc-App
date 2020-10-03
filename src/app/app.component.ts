@@ -43,11 +43,11 @@ export class AppComponent implements OnInit {
     //   url: '/find-church',
     //   image: 'assets/imgs/ic_church.png'
     // },
-    {
-      title: 'video',
-      url: '/movies',
-      image: 'assets/imgs/ic_gallery.png'
-    },
+    // {
+    //   title: 'video',
+    //   url: '/movies',
+    //   image: 'assets/imgs/ic_gallery.png'
+    // },
     // {
     //   title: 'prayers',
     //   url: '/prayers',

@@ -59,6 +59,15 @@ export class NotesPage implements OnInit {
     })
   }
 
+  EditNotes() {
+    this.api.getNotes()
+    .subscribe((res:any) => {
+      this.notes = res.data;
+    }, err => {
+
+    })
+  }
+
   createNote(): void {
     this.api.post('notes', this.note).subscribe((data: Notes[]) => {
       console.log(data)
