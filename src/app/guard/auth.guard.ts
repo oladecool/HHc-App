@@ -12,6 +12,16 @@ export class AuthGuard implements CanActivate, CanLoad {
   constructor(private router: Router, public jwtHelper: JwtHelperService, private api: ApiService) { }
   canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
     // this.api.user().data
+
+    // const token = localStorage.getItem('token');
+
+    // if (token) {
+    // resolve(true);
+    // } else {
+    // this.router.navigate(['/login'], { queryParams: { returnUrl: state.url } });
+    // resolve(false);
+    // }
+
     if (this.api.user()) {
       // logged in so return true
       return true;
