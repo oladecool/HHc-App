@@ -27,6 +27,7 @@ export class AuthInterceptor implements HttpInterceptor {
             req = req.clone({
                 setHeaders: {
                     'Content-Type': 'application/json',
+                    // 'Content-Type': 'application/x-www-form-urlencoded' ,
                     // 'Access-Control-Allow-Origin': '*',
                     Authorization: `Bearer ${this.jwtHelper.tokenGetter()}`
                     // Authorization: `Bearer ` + this.jwtHelper.tokenGetter()
