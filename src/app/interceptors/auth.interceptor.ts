@@ -19,7 +19,7 @@ export class AuthInterceptor implements HttpInterceptor {
         if (this.url === 'upload') {
             req = req.clone({
                 setHeaders: {
-                    // 'Access-Control-Allow-Origin': '*',
+                    'Access-Control-Allow-Origin': '*',
                     Authorization: `Bearer ${this.jwtHelper.tokenGetter()}`
                 }
             });
@@ -50,7 +50,7 @@ export class AuthInterceptor implements HttpInterceptor {
             // this.error.log(err); // console.log(err);
             if (err instanceof HttpErrorResponse) {
                 if (err.status === 401) {
-                    this.notify.error('Login Session Expired Please Login Again');
+                    this.notify.error('Account email not verified');
                     localStorage.removeItem('HHC');
                     return this.router.navigate(['/sign-in']);
                 }
