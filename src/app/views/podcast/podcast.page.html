@@ -9,16 +9,41 @@
 </ion-header>
 
 <ion-content fullscreen class="bg_img">
+<ion-card *ngFor="let pod of pods">
+  <ion-card-header>
+    <ion-card-subtitle>{{ pod.title }}</ion-card-subtitle>
+    <ion-card-title>Uploaded By: kwadwo boateng bempah</ion-card-title>
+      <div class="icons">
+<!--          <ion-icon (click)="play(pod.podcast_file)" class="playicon" name="play-outline"></ion-icon>-->
+<!--          <ion-icon class="downloadicon" name="download-outline"></ion-icon>-->
+      </div>
+  </ion-card-header>
 
+  <ion-card-content>
+    <img src="http://office.holyhillchapelag.com/public/uploads/thumbnails/{{pod.podcast_image}}">
+       <audio controls>
+  <source src="http://office.holyhillchapelag.com/public/uploads/audios/{{pod.podcast_file}}" type="audio/mpeg"></audio> 
+  </ion-card-content>
+</ion-card>
+<!--
   <ion-list>
+      
     <ion-item *ngFor="let pod of pods">
-      <ion-label>
-        Uploaded By
-        <p>{{ pod.uploader.name }}</p>
-        <!-- <h3>KWADWO BOATENG BEMPAH</h3> -->
-      </ion-label>
+        <div class="imgwrapper">
+            <div class="img">
+                <img src="http://office.holyhillchapelag.com/public/uploads/thumbnails/{{pod.podcast_image}}">
+            </div>
+            <div class="textright">
+                <p>{{ pod.title }}</p>
+                <p>Uploaded By: {{ pod.uploader.name }}</p>
+            </div>
+        </div>
       <a color="primary" slot="end" href="http://office.holyhillchapelag.com/public/uploads/audios/{{ pod.title }}">Download</a>
     </ion-item>
   </ion-list>
- 
+-->
+<!--
+ <ion-button (click)="play()" color="primary">Play</ion-button>
+<ion-button (click)="pause()" color="secondary">Pause</ion-button>
+-->
 </ion-content>

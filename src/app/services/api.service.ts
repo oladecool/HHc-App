@@ -58,6 +58,10 @@ export class ApiService {
     this.show();
     return this.http.get(this.api + 'podcasts');
   }
+  getUserPods(postdata) {
+    this.show();
+    return this.http.post(this.api + 'podcasts',JSON.stringify(postdata));
+  }
 
   get(route) {
     this.show();

@@ -27,6 +27,9 @@ import { SocialSharing } from "@ionic-native/social-sharing/ngx";
 
 import { OneSignal } from '@ionic-native/onesignal/ngx';
 
+import { File } from '@ionic-native/file/ngx';
+import { FileTransfer } from '@ionic-native/file-transfer/ngx';
+import { Media } from '@ionic-native/media/ngx';
 
 export function tokenGetter() {
   return JSON.parse(localStorage.getItem('HHC'));
@@ -71,6 +74,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     ApiService, 
     NotificationService,
     ErrorsService,
+        File,
+        FileTransfer,
+        Media,
     { provide: APP_CONFIG, useValue: BaseAppConfig },
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }

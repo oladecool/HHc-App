@@ -13,13 +13,12 @@
 
     <div class="book_row" >
         <ion-row>
-            <ion-col size="6" *ngFor="let book of books">
-                <div class="book" (click)="bookinfo(book)">
+            <ion-col size="6">
+                <div class="book">
                     <div class="book_img center_img" style="height: 150px; width: 120px;">
-                        <img src="http://office.holyhillchapelag.com/public/uploads/books/{{book.cover}}" class="crop_img" />
+                        <a href="http://office.holyhillchapelag.com" > </a>
                     </div>
-                    <p class="ion-text-center">{{book.title}}</p>
-                </div>
+                </div> 
             </ion-col>   
         </ion-row>
     </div>

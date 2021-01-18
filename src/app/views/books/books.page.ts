@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { InAppBrowserOptions } from '@ionic-native/in-app-browser';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 import { ApiService } from '../../services/api.service';
+
 
 // interface book{
 //   title:string,
@@ -20,20 +23,29 @@ export class BooksPage implements OnInit {
   filtered: any[] = [];
   book: any;
 
-  constructor(private route: Router, private api: ApiService) { }
+  constructor(private route: Router, private api: ApiService, private iab: InAppBrowser,
+    ) { }
 
   ngOnInit() {
-    this.getBooks();
+    // this.getBooks();
     // this.Books();
   }
 
-  getBooks(){
-    this.api.get('books').subscribe((res: Books) => {
-      console.log(res.data);
-      this.books = res.data; 
-      this.filtered = res.data;
-    })  
+  Books() {
+    const option: InAppBrowserOptions ={
+      zoom: 'no',
+      hardwareback: 'no'
+    }
+   this.iab.create("http://paystack.com/pay/holyhill/", "_self", option);
   }
+
+  // getBooks(){
+  //   this.api.get('books').subscribe((res: Books) => {
+  //     console.log(res.data);
+  //     this.books = res.data; 
+  //     this.filtered = res.data;
+  //   })  
+  // }
 
   // Books(){
   //   this.api.getBooks().subscribe((data: any[]) => {

@@ -165,7 +165,7 @@ const routes: Routes = [
     path: "podcast",
     loadChildren: () =>
       import("./views/podcast/podcast.module").then((m) => m.PodcastPageModule),
-      canActivate: [AuthGuard]
+//      canActivate: [AuthGuard]
   },
   {
     path: "donate",

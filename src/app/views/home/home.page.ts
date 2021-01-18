@@ -30,7 +30,12 @@ export class HomePage implements OnInit {
     this.route.navigate(["./bible"]);
   }
   books() {
-    this.route.navigate(["./books"]);
+    const option: InAppBrowserOptions ={
+    zoom: 'no',
+    hardwareback: 'no'
+  }
+ this.iab.create("https://www.amazon.com/KWADWO-BOATENG-BEMPAH/e/B08K7NGPFB?ref=sr_ntt_srch_lnk_2&qid=1607023441&sr=1-2", "_self", option);
+//    this.route.navigate(["./books"]);
   }
   chats() {
     this.route.navigate(["./chats"]);
@@ -65,6 +70,10 @@ export class HomePage implements OnInit {
     this.route.navigate(["./donate"]);
   }
 
+  live() {
+    this.route.navigate(["./live-stream"]);
+ }
+
   share() {
     // this.api.social();
     let options = {
@@ -77,9 +86,9 @@ export class HomePage implements OnInit {
   live_stream() {
     const option: InAppBrowserOptions ={
       zoom: 'no',
-      hardwareback: 'no'
+      hardwareback: 'yes'
     }
-   this.iab.create("https://www.youtube.com/channel/UCiH07V2Lhm-zwXxDPIw-qmA", "_self", option);
+   this.iab.create("https://www.youtube.com/channel/UCiH07V2Lhm-zwXxDPIw-qmA", "_self",  option);
   }
 
   payment() {
@@ -97,4 +106,6 @@ export class HomePage implements OnInit {
     }
    this.iab.create("http://holyhillchapelag.com/", "_self", option);
 }
+
+ 
 }

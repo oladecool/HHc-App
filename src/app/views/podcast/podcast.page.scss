@@ -1,0 +1,47 @@
+app-podcast{
+    ion-list{
+        background: transparent !important;
+    }
+    .item-native{
+//        background-color: #423b3b !important;
+    }
+    ion-item{
+//        background-color: #423b3b;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 20px;
+        .imgwrapper{
+//            background-color: #423b3b;
+            .img{
+                display: inline-block;
+                float: left;
+                max-width: 30%;
+                img{
+                    max-width: 100%;
+                }
+            }
+            .textright{
+                p{
+                    
+                }
+            }
+        }
+    }
+    .icons{
+        margin-top: 15px;
+        overflow: hidden;
+        ion-icon{
+            color: #118f95;
+            font-size: 25px;
+        }
+        .playicon{
+            float: left;
+        }
+        .downloadicon{
+            float: right;
+        }
+    }
+    audio{
+        width: 100%;
+    }
+}
