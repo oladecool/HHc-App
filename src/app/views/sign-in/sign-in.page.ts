@@ -57,8 +57,8 @@ export class SignInPage implements OnInit {
 
     init() {
         this.log = {
-            email: "danishkhan.developer@gmail.com",
-            password: "welcome"
+            email: "",
+            password: ""
         };
     }
     podCast(){
