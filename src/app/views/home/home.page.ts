@@ -34,7 +34,7 @@ export class HomePage implements OnInit {
     zoom: 'no',
     hardwareback: 'no'
   }
- this.iab.create("https://www.amazon.com/KWADWO-BOATENG-BEMPAH/e/B08K7NGPFB?ref=sr_ntt_srch_lnk_2&qid=1607023441&sr=1-2", "_self", option);
+  this.iab.create("https://www.amazon.com/KWADWO-BOATENG-BEMPAH/e/B08K7NGPFB?ref=sr_ntt_srch_lnk_2&qid=1607023441&sr=1-2", "_self", option);
 //    this.route.navigate(["./books"]);
   }
   chats() {

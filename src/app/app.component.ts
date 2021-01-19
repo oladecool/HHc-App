@@ -28,11 +28,11 @@ export class AppComponent implements OnInit {
       url: '/home',
       image: 'assets/imgs/ic_home.png'
     },
-    {
-      title: 'books',
-      url: '/books',
-      image: 'assets/imgs/ic_book.png' 
-    },
+    // {
+    //   title: 'books',
+    //   url: '/books',
+    //   image: 'assets/imgs/ic_book.png' 
+    // },
     // {
     //   title: 'chat_father',
     //   url: '/chats',
